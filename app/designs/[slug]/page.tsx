@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { designs, getDesignBySlug, getRelatedDesigns } from "@/lib/designs";
+import { getProductSchema } from "@/lib/schema";
+import JsonLd from "@/components/seo/JsonLd";
 import DesignDetailClient from "./DesignDetailClient";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -29,6 +31,11 @@ export default async function DesignDetailPage({ params }: Props) {
   const design = getDesignBySlug(slug);
   if (!design) notFound();
   const related = getRelatedDesigns(design);
-  return <DesignDetailClient design={design} related={related} />;
+  return (
+    <>
+      <JsonLd data={getProductSchema(design)} />
+      <DesignDetailClient design={design} related={related} />
+    </>
+  );
 }
 

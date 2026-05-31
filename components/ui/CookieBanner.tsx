@@ -13,6 +13,7 @@ export function CookieBanner() {
 
   const accept = () => {
     localStorage.setItem("cookies-accepted", "true");
+    window.dispatchEvent(new Event("cookies-accepted"));
     setVisible(false);
   };
 

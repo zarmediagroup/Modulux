@@ -14,6 +14,7 @@ const footerLinks = {
     { label: "About Us", href: "/about" },
     { label: "Our Process", href: "/about#process" },
     { label: "Display Village", href: "/display-village" },
+    { label: "Blog", href: "/blog" },
     { label: "Careers", href: "/careers" },
   ],
   Support: [

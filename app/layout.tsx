@@ -5,38 +5,57 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import CookieBanner from "@/components/ui/CookieBanner";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import JsonLd from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site";
+import { getLocalBusinessSchema, getOrganizationSchema } from "@/lib/schema";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "MODULUX — The Modern Way of Housing",
+    default: "MODULUX — Modular Homes Cape Town | The Modern Way of Housing",
     template: "%s | MODULUX",
   },
-  description:
-    "MODULUX builds precision-engineered modular homes in Cape Town, South Africa. Beautifully designed, delivered fully finished, anywhere in South Africa.",
+  description: siteConfig.description,
   keywords: [
-    "modular homes",
-    "ready-made homes",
-    "South Africa",
-    "Cape Town",
-    "affordable housing",
+    "modular homes South Africa",
+    "modular homes Cape Town",
+    "prefab homes South Africa",
+    "granny flat Cape Town",
+    "NHBRC modular homes",
+    "affordable modular housing",
     "MODULUX",
   ],
+  metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "MODULUX — The Modern Way of Housing",
-    description:
-      "Beautifully engineered modular homes, delivered to your site and ready to live in.",
-    url: "https://modulux.co.za",
-    siteName: "MODULUX",
-    locale: "en_ZA",
+    title: "MODULUX — Modular Homes Cape Town",
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
     type: "website",
   },
-  metadataBase: new URL("https://modulux.co.za"),
+  twitter: {
+    card: "summary_large_image",
+    title: "MODULUX — Modular Homes Cape Town",
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: siteConfig.googleSiteVerification,
+  },
 };
 
 export default function RootLayout({
@@ -45,13 +64,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en-ZA" className={inter.variable}>
       <body>
+        <JsonLd data={[getOrganizationSchema(), getLocalBusinessSchema()]} />
         <Header />
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
         <CookieBanner />
+        <GoogleAnalytics />
       </body>
     </html>
   );

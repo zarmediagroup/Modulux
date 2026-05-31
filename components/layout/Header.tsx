@@ -28,6 +28,7 @@ const navLinks = [
     ],
   },
   { label: "Commercial", href: "/commercial" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Header() {
