@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -9,6 +10,7 @@ import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import JsonLd from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
 import { getLocalBusinessSchema, getOrganizationSchema } from "@/lib/schema";
+import { isMaintenanceMode } from "@/lib/maintenance";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -58,21 +60,27 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const showSiteChrome =
+    !isMaintenanceMode() || headersList.get("x-maintenance") !== "1";
+
   return (
     <html lang="en-ZA" className={inter.variable}>
       <body>
-        <JsonLd data={[getOrganizationSchema(), getLocalBusinessSchema()]} />
-        <Header />
+        {showSiteChrome && (
+          <JsonLd data={[getOrganizationSchema(), getLocalBusinessSchema()]} />
+        )}
+        {showSiteChrome && <Header />}
         <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
-        <CookieBanner />
-        <GoogleAnalytics />
+        {showSiteChrome && <Footer />}
+        {showSiteChrome && <WhatsAppButton />}
+        {showSiteChrome && <CookieBanner />}
+        {showSiteChrome && <GoogleAnalytics />}
       </body>
     </html>
   );

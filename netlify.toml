@@ -4,8 +4,9 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "20"
-  NPM_FLAGS    = "--legacy-peer-deps"
+  NODE_VERSION       = "20"
+  NPM_FLAGS          = "--legacy-peer-deps"
+  MAINTENANCE_MODE   = "true"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
