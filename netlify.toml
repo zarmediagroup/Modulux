@@ -6,7 +6,7 @@
 [build.environment]
   NODE_VERSION       = "20"
   NPM_FLAGS          = "--legacy-peer-deps"
-  MAINTENANCE_MODE   = "true"
+  MAINTENANCE_MODE   = "false"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

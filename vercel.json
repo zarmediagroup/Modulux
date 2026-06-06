@@ -1,5 +1,5 @@
 {
   "env": {
-    "MAINTENANCE_MODE": "true"
+    "MAINTENANCE_MODE": "false"
   }
 }
