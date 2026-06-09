@@ -1,3 +1,5 @@
+import { designImage, floorPlanImage } from "@/lib/images";
+
 export type HomeDesign = {
   slug: string;
   name: string;
@@ -17,33 +19,7 @@ export type HomeDesign = {
   specifications: { label: string; value: string }[];
 };
 
-// Reusable image base helpers
-const u = (id: string, w = 1200, h = 800) =>
-  `https://images.unsplash.com/photo-${id}?w=${w}&h=${h}&fit=crop&q=80`;
-
-// Houses – Exteriors
-const EXT_LUXURY_1    = u("1600596542815-ffad4c1539a9"); // white luxury modern house
-const EXT_LUXURY_2    = u("1564013799919-ab600027ffc6"); // natural setting luxury
-const EXT_MODERN_1    = u("1568605114967-8130f3a36994"); // white contemporary
-const EXT_MODERN_2    = u("1570129477492-45c003edd2be"); // contemporary home
-const EXT_MODERN_3    = u("1600585154340-be6161a56a0c"); // modern white house
-const EXT_VILLA       = u("1580587771525-78b9dba3b914"); // villa style
-const EXT_COMPACT_1   = u("1598228723793-52759bba239c"); // compact small home
-const EXT_COMPACT_2   = u("1560184897-ae9a258c21ea");    // small modern home
-
-// Interiors
-const INT_LIVING_1    = u("1583608205776-bfd35f0d9f83"); // living room
-const INT_LIVING_2    = u("1560448204-e02f11c3d0e2");    // open-plan lounge
-const INT_KITCHEN_1   = u("1556909114-f6e7ad7d3136");    // modern kitchen
-const INT_KITCHEN_2   = u("1484154218962-a197022b5858"); // open kitchen
-const INT_BEDROOM_1   = u("1522771739844-6a9f6d5f14af"); // master bedroom
-const INT_BEDROOM_2   = u("1616594039964-ae9021a400a0"); // bedroom 2
-const INT_BATHROOM_1  = u("1552321554-5fefe8c9ef14");    // bathroom
-const INT_BATHROOM_2  = u("1631049307264-da0ec9d70304"); // luxury bathroom
-const INT_PATIO       = u("1600607687920-4e2a09cf159d"); // outdoor patio/deck
-
-// Floor plans (use lighter toned architectural shot as placeholder)
-const FLOOR_PLAN      = u("1503387762-592deb58ef4e", 800, 600); // architectural drawing style
+const hero = designImage("MODULUX modular home");
 
 export const designs: HomeDesign[] = [
   {
@@ -70,14 +46,14 @@ export const designs: HomeDesign[] = [
       "15-year structural warranty",
     ],
     images: [
-      { src: EXT_LUXURY_1,   alt: "The Stellenbosch exterior" },
-      { src: INT_LIVING_1,   alt: "Open-plan living area" },
-      { src: INT_KITCHEN_1,  alt: "Modern kitchen" },
-      { src: INT_BEDROOM_1,  alt: "Master bedroom" },
-      { src: INT_BATHROOM_1, alt: "En-suite bathroom" },
-      { src: INT_PATIO,      alt: "Covered patio" },
+      { ...hero, alt: "The Stellenbosch exterior" },
+      { ...hero, alt: "Open-plan living area" },
+      { ...hero, alt: "Modern kitchen" },
+      { ...hero, alt: "Master bedroom" },
+      { ...hero, alt: "En-suite bathroom" },
+      { ...hero, alt: "Covered patio" },
     ],
-    floorPlanImage: FLOOR_PLAN,
+    floorPlanImage: floorPlanImage,
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "145 m²" },
@@ -118,12 +94,12 @@ export const designs: HomeDesign[] = [
       "Delivered fully finished",
     ],
     images: [
-      { src: EXT_MODERN_1,  alt: "The Karoo exterior" },
-      { src: INT_LIVING_2,  alt: "Karoo living space" },
-      { src: INT_KITCHEN_2, alt: "Karoo kitchen" },
-      { src: INT_BEDROOM_2, alt: "Karoo bedroom" },
+      { ...hero, alt: "The Karoo exterior" },
+      { ...hero, alt: "Karoo living space" },
+      { ...hero, alt: "Karoo kitchen" },
+      { ...hero, alt: "Karoo bedroom" },
     ],
-    floorPlanImage: FLOOR_PLAN,
+    floorPlanImage: floorPlanImage,
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "89 m²" },
@@ -166,14 +142,14 @@ export const designs: HomeDesign[] = [
       "15-year structural warranty",
     ],
     images: [
-      { src: EXT_LUXURY_2,   alt: "The Blouberg exterior" },
-      { src: INT_LIVING_1,   alt: "Open plan living" },
-      { src: INT_KITCHEN_1,  alt: "Chef's kitchen" },
-      { src: INT_BEDROOM_1,  alt: "Master suite" },
-      { src: INT_BATHROOM_2, alt: "Luxury master bathroom" },
-      { src: INT_PATIO,      alt: "Entertainment deck" },
+      { ...hero, alt: "The Blouberg exterior" },
+      { ...hero, alt: "Open plan living" },
+      { ...hero, alt: "Chef's kitchen" },
+      { ...hero, alt: "Master suite" },
+      { ...hero, alt: "Luxury master bathroom" },
+      { ...hero, alt: "Entertainment deck" },
     ],
-    floorPlanImage: FLOOR_PLAN,
+    floorPlanImage: floorPlanImage,
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "210 m²" },
@@ -214,12 +190,12 @@ export const designs: HomeDesign[] = [
       "15-year structural warranty",
     ],
     images: [
-      { src: EXT_COMPACT_1, alt: "The Constantia exterior" },
-      { src: INT_LIVING_2,  alt: "Living area" },
-      { src: INT_BEDROOM_2, alt: "Bedroom" },
-      { src: INT_BATHROOM_1, alt: "Bathroom" },
+      { ...hero, alt: "The Constantia exterior" },
+      { ...hero, alt: "Living area" },
+      { ...hero, alt: "Bedroom" },
+      { ...hero, alt: "Bathroom" },
     ],
-    floorPlanImage: FLOOR_PLAN,
+    floorPlanImage: floorPlanImage,
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "52 m²" },
@@ -260,13 +236,13 @@ export const designs: HomeDesign[] = [
       "15-year structural warranty",
     ],
     images: [
-      { src: EXT_VILLA,      alt: "The Franschhoek exterior" },
-      { src: INT_LIVING_1,   alt: "Living area with beams" },
-      { src: INT_KITCHEN_2,  alt: "Kitchen" },
-      { src: INT_BEDROOM_1,  alt: "Master suite" },
-      { src: INT_PATIO,      alt: "Covered stoep" },
+      { ...hero, alt: "The Franschhoek exterior" },
+      { ...hero, alt: "Living area with beams" },
+      { ...hero, alt: "Kitchen" },
+      { ...hero, alt: "Master suite" },
+      { ...hero, alt: "Covered stoep" },
     ],
-    floorPlanImage: FLOOR_PLAN,
+    floorPlanImage: floorPlanImage,
     isFeatured: false,
     specifications: [
       { label: "Total Area", value: "168 m²" },
@@ -307,12 +283,12 @@ export const designs: HomeDesign[] = [
       "15-year structural warranty",
     ],
     images: [
-      { src: EXT_MODERN_2,  alt: "The Swartland exterior" },
-      { src: INT_LIVING_2,  alt: "Living area" },
-      { src: INT_KITCHEN_1, alt: "Kitchen" },
-      { src: INT_BEDROOM_2, alt: "Bedroom" },
+      { ...hero, alt: "The Swartland exterior" },
+      { ...hero, alt: "Living area" },
+      { ...hero, alt: "Kitchen" },
+      { ...hero, alt: "Bedroom" },
     ],
-    floorPlanImage: FLOOR_PLAN,
+    floorPlanImage: floorPlanImage,
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "112 m²" },
@@ -353,12 +329,12 @@ export const designs: HomeDesign[] = [
       "15-year structural warranty",
     ],
     images: [
-      { src: EXT_COMPACT_2, alt: "The Paarl exterior" },
-      { src: INT_LIVING_2,  alt: "Living space" },
-      { src: INT_BEDROOM_2, alt: "Bedroom" },
-      { src: INT_BATHROOM_1, alt: "Bathroom" },
+      { ...hero, alt: "The Paarl exterior" },
+      { ...hero, alt: "Living space" },
+      { ...hero, alt: "Bedroom" },
+      { ...hero, alt: "Bathroom" },
     ],
-    floorPlanImage: FLOOR_PLAN,
+    floorPlanImage: floorPlanImage,
     isFeatured: false,
     specifications: [
       { label: "Total Area", value: "65 m²" },

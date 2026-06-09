@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { productLineImages } from "@/lib/images";
 
 const brands = [
   {
@@ -14,7 +15,7 @@ const brands = [
       "Quality homes that don't compromise on style. Thoughtfully designed, energy-efficient, and built to last. The perfect entry point into modular living.",
     price: "Starting from R950,000",
     href: "/designs?category=Standard",
-    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=600&fit=crop&q=80",
+    image: productLineImages.standard,
     accent: "#9CA3AF",
     tag: "Standard",
   },
@@ -24,7 +25,7 @@ const brands = [
       "Architecturally refined homes with premium finishes, generous proportions, and an elevated aesthetic. For those who won't settle for less than exceptional.",
     price: "Starting from R1,850,000",
     href: "/designs?category=Premium",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop&q=80",
+    image: productLineImages.premium,
     accent: "#C8A97E",
     tag: "Premium",
   },
@@ -34,7 +35,7 @@ const brands = [
       "Compact, clever, and fully self-contained. Generate rental income, house family, or create the perfect home office — all on your existing stand.",
     price: "Starting from R620,000",
     href: "/designs?category=Granny+Flat",
-    image: "https://images.unsplash.com/photo-1598228723793-52759bba239c?w=800&h=600&fit=crop&q=80",
+    image: productLineImages.grannyFlat,
     accent: "#6EBD8A",
     tag: "Granny Flat",
   },
@@ -70,7 +71,7 @@ export default function SubBrandsSection() {
                     src={brand.image}
                     alt={brand.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover object-[75%_center] transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />

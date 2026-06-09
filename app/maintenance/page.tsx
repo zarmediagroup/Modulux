@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Wrench } from "lucide-react";
 import { siteConfig } from "@/lib/site";
+import { siteImages } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Under Maintenance",
@@ -17,7 +18,7 @@ export default function MaintenancePage() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/maintenance-hero.jpg"
+          src={siteImages.maintenance}
           alt="MODULUX modular home at sunrise"
           fill
           priority

@@ -14,6 +14,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
+import { aboutFactoryGallery, commercialGallery, siteImages } from "@/lib/images";
 
 // ─── Data ──────────────────────────────────────────────────────────────────
 
@@ -23,7 +24,7 @@ const solutions = [
     title: "Office Buildings",
     description:
       "Contemporary modular office spaces from single-room site offices to multi-storey commercial buildings. Fully fitted with electrical, data, HVAC, and ablutions.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&q=80",
+    image: siteImages.hero,
     features: ["Open-plan or cellular layouts", "Data & electrical reticulation", "Air conditioning ready", "Disabled access compliant"],
   },
   {
@@ -31,7 +32,7 @@ const solutions = [
     title: "Schools & Education",
     description:
       "Rapidly deployable classrooms, administration blocks, and full school campuses. SABS-compliant, energy-efficient, and designed for the African climate.",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=600&fit=crop&q=80",
+    image: siteImages.hero,
     features: ["Single classrooms or full campuses", "SABS & DBE compliant", "Natural ventilation design", "Vandal-resistant options"],
   },
   {
@@ -39,7 +40,7 @@ const solutions = [
     title: "Clinics & Healthcare",
     description:
       "Purpose-built primary healthcare facilities, mobile clinics, and specialist treatment units. Designed to meet DoH specifications and infection control requirements.",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop&q=80",
+    image: siteImages.hero,
     features: ["DoH specification compliant", "Infection control design", "Pharmacy & consulting rooms", "Ablution blocks included"],
   },
   {
@@ -47,7 +48,7 @@ const solutions = [
     title: "Workforce Accommodation",
     description:
       "Mining, construction, and agricultural workforce camps. Dormitory-style or en-suite single rooms, with full dining, ablution, and recreational facilities.",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop&q=80",
+    image: siteImages.hero,
     features: ["Dormitory & en-suite options", "Dining & kitchen facilities", "Ablution blocks", "Site offices & recreation"],
   },
   {
@@ -55,7 +56,7 @@ const solutions = [
     title: "Relocatable Structures",
     description:
       "Need flexibility? Our relocatable modular buildings can be installed, demounted, and redeployed to a new site — ideal for temporary or seasonal operations.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&q=80",
+    image: siteImages.hero,
     features: ["Fully relocatable", "Rapid 2–5 day installation", "Hire or purchase options", "Nationwide deployment"],
   },
   {
@@ -63,7 +64,7 @@ const solutions = [
     title: "Retail & Hospitality",
     description:
       "Pop-up retail spaces, restaurants, lodges, and hospitality units. We've built everything from farm stalls to luxury bush lodges using modular construction.",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop&q=80",
+    image: siteImages.hero,
     features: ["Retail kiosks to full restaurants", "Lodge & chalet units", "Commercial kitchen ready", "Custom exterior finishes"],
   },
 ];
@@ -127,11 +128,11 @@ export default function CommercialPageClient() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80"
-          alt="Modern commercial building"
+          src={siteImages.hero}
+          alt="MODULUX modular commercial building"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[75%_center]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
@@ -299,14 +300,16 @@ export default function CommercialPageClient() {
               transition={{ duration: 0.7 }}
               className="grid grid-cols-2 gap-4"
             >
-              {[
-                "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&q=80",
-                "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop&q=80",
-                "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop&q=80",
-                "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop&q=80",
-              ].map((src, i) => (
+              {aboutFactoryGallery.map((img, i) => (
                 <div key={i} className={`relative rounded-2xl overflow-hidden ${i === 1 ? "mt-6" : i === 3 ? "-mt-6" : ""}`} style={{ aspectRatio: "4/3" }}>
-                  <Image src={src} alt={`Commercial project ${i + 1}`} fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+                  <Image
+                    src={img.src}
+                    alt={`Commercial project ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    style={{ objectPosition: img.objectPosition }}
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
                 </div>
               ))}
             </motion.div>
@@ -392,13 +395,7 @@ export default function CommercialPageClient() {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop&q=80", span: "col-span-2 row-span-2" },
-              { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&q=80", span: "" },
-              { src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop&q=80", span: "" },
-              { src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop&q=80", span: "" },
-              { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&q=80", span: "" },
-            ].map(({ src, span }, i) => (
+            {commercialGallery.map(({ src, span, objectPosition }, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.96 }}
@@ -408,7 +405,14 @@ export default function CommercialPageClient() {
                 className={`relative rounded-xl overflow-hidden group ${span}`}
                 style={{ aspectRatio: span ? undefined : "4/3", minHeight: span ? "300px" : undefined }}
               >
-                <Image src={src} alt={`Commercial project ${i + 1}`} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 25vw" />
+                <Image
+                  src={src}
+                  alt={`Commercial project ${i + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{ objectPosition }}
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
               </motion.div>
             ))}
@@ -508,10 +512,10 @@ export default function CommercialPageClient() {
             >
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&q=80"
-                  alt="Modern commercial building"
+                  src={siteImages.hero}
+                  alt="MODULUX modular commercial building"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[75%_center]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">

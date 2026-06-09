@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown, Play } from "lucide-react";
 import { Button, ButtonOutlineWhite } from "@/components/ui/Button";
+import { siteImages } from "@/lib/images";
 
 export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,11 +21,11 @@ export default function HeroSection() {
       {/* Background Image with Parallax */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&h=1080&fit=crop&q=80"
+          src={siteImages.hero}
           alt="MODULUX modular home exterior"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-[75%_center]"
           sizes="100vw"
         />
         {/* Gradient overlay */}

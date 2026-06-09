@@ -7,6 +7,7 @@ import { ArrowRight, Heart, Lightbulb, Shield, Users } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import { aboutFactoryGallery, siteImages } from "@/lib/images";
 
 const timeline = [
   { year: "2015", title: "MODULUX Founded", description: "Started in a small Cape Town workshop with a vision to make quality housing accessible to all South Africans." },
@@ -31,12 +32,7 @@ const values = [
   { icon: Users, title: "Community", description: "We build more than homes — we build communities. Proudly South African, serving every province." },
 ];
 
-const galleryImages = [
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=600&h=400&fit=crop&q=80",
-];
+const galleryImages = aboutFactoryGallery;
 
 export default function AboutPageClient() {
   return (
@@ -44,11 +40,11 @@ export default function AboutPageClient() {
       {/* Hero */}
       <div className="relative min-h-[60vh] flex items-end bg-[#1C1C1C] overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&h=1080&fit=crop&q=80"
-          alt="MODULUX factory"
+          src={siteImages.hero}
+          alt="MODULUX modular home"
           fill
           priority
-          className="object-cover opacity-40"
+          className="object-cover object-[75%_center] opacity-40"
           sizes="100vw"
         />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 pt-40 w-full">
@@ -100,10 +96,10 @@ export default function AboutPageClient() {
               className="relative aspect-[4/3] rounded-2xl overflow-hidden"
             >
               <Image
-                src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop&q=80"
+                src={siteImages.hero}
                 alt="MODULUX home exterior"
                 fill
-                className="object-cover"
+                className="object-cover object-[75%_center]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
@@ -251,7 +247,7 @@ export default function AboutPageClient() {
               </div>
             </motion.div>
             <div className="grid grid-cols-2 gap-4">
-              {galleryImages.map((src, i) => (
+              {galleryImages.map((img, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, scale: 0.96 }}
@@ -260,7 +256,14 @@ export default function AboutPageClient() {
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                   className="relative aspect-[4/3] rounded-xl overflow-hidden"
                 >
-                  <Image src={src} alt={`Factory image ${i + 1}`} fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+                  <Image
+                    src={img.src}
+                    alt={`MODULUX factory image ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    style={{ objectPosition: img.objectPosition }}
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
                 </motion.div>
               ))}
             </div>

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { siteImages } from "@/lib/images";
 
 const checkpoints = [
   "Factory-built precision engineering",
@@ -82,10 +83,10 @@ export default function AboutSection() {
           >
             <div className="relative rounded-2xl overflow-hidden aspect-[4/5]">
               <Image
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=1000&fit=crop&q=80"
+                src={siteImages.hero}
                 alt="MODULUX modular home"
                 fill
-                className="object-cover"
+                className="object-cover object-[75%_center]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

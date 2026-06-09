@@ -6,49 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ZoomIn } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
-
-const galleryImages = [
-  {
-    src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop&q=80",
-    alt: "Modern luxury home exterior",
-    span: "row-span-1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&h=1000&fit=crop&q=80",
-    alt: "Bright open-plan living area",
-    span: "row-span-2",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=600&fit=crop&q=80",
-    alt: "Master bedroom interior",
-    span: "row-span-1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop&q=80",
-    alt: "Covered outdoor patio",
-    span: "row-span-1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop&q=80",
-    alt: "Contemporary home facade",
-    span: "row-span-1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=1000&fit=crop&q=80",
-    alt: "Modern kitchen design",
-    span: "row-span-2",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop&q=80",
-    alt: "Luxury bathroom",
-    span: "row-span-1",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=600&fit=crop&q=80",
-    alt: "White contemporary home",
-    span: "row-span-1",
-  },
-];
+import { galleryImages } from "@/lib/images";
 
 export default function GallerySection() {
   return (
@@ -89,6 +47,7 @@ export default function GallerySection() {
                 alt={img.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
+                style={{ objectPosition: img.objectPosition }}
                 sizes="(max-width: 768px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
