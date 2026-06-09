@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import InfoPage from "@/components/layout/InfoPage";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Terms of Use",
   description: "Terms and conditions for using the MODULUX website.",
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

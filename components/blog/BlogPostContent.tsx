@@ -53,7 +53,7 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#1C1C1C] tracking-tight mt-3">
           {post.title}
         </h1>
-        <p className="mt-4 text-lg text-[#7A7A7A] leading-relaxed">{post.excerpt}</p>
+        <p className="mt-4 text-lg text-[#7A7A7A] leading-relaxed blog-excerpt">{post.excerpt}</p>
       </header>
 
       <div className="prose-modulux">{post.sections.map(renderSection)}</div>

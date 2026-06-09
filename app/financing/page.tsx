@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import InfoPage from "@/components/layout/InfoPage";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Financing Options",
   description: "Finance your MODULUX modular home — bond, personal loan, and granny flat investment options.",
-};
+  path: "/financing",
+  keywords: [
+    "modular home finance South Africa",
+    "bond for prefab home",
+    "granny flat investment finance",
+  ],
+});
 
 export default function FinancingPage() {
   return (

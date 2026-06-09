@@ -54,6 +54,7 @@ export const metadata: Metadata = {
     "geo.placename": "Bellville, Cape Town",
     "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
     ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
+    "llms-txt": `${siteConfig.url}/llms.txt`,
   },
   twitter: {
     card: "summary_large_image",

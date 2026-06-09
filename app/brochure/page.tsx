@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import InfoPage from "@/components/layout/InfoPage";
 import { siteConfig } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Download Brochure",
   description: "Request the MODULUX modular homes brochure — Standard, Premium, and Granny Flat ranges.",
-};
+  path: "/brochure",
+});
 
 export default function BrochurePage() {
   return (

@@ -4,7 +4,7 @@ import IntroSection from "@/components/sections/IntroSection";
 import FeaturedDesignsSection from "@/components/sections/FeaturedDesignsSection";
 import JsonLd from "@/components/seo/JsonLd";
 import { pageMetadata } from "@/lib/seo";
-import { getFAQPageSchema, getHowToSchema } from "@/lib/schema";
+import { getHowToSchema } from "@/lib/schema";
 
 const SubBrandsSection = dynamic(() => import("@/components/sections/SubBrandsSection"));
 const AboutSection = dynamic(() => import("@/components/sections/AboutSection"));
@@ -31,7 +31,7 @@ export const metadata = pageMetadata({
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={[getFAQPageSchema(), getHowToSchema()]} />
+      <JsonLd data={getHowToSchema()} />
       <HeroSection />
       <IntroSection />
       <SubBrandsSection />

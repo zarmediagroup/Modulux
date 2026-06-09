@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import InfoPage from "@/components/layout/InfoPage";
 import { siteConfig } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Careers",
   description: "Join the MODULUX team — careers in modular home manufacturing, sales, and design in Cape Town.",
-};
+  path: "/careers",
+  keywords: [
+    "MODULUX careers",
+    "modular home jobs Cape Town",
+    "prefab manufacturing jobs Western Cape",
+  ],
+});
 
 export default function CareersPage() {
   return (

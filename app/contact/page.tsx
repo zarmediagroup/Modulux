@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ContactPageClient from "./ContactPageClient";
 import JsonLd from "@/components/seo/JsonLd";
 import { pageMetadata } from "@/lib/seo";
-import { getFAQPageSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getFAQPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
   title: "Contact Us",
@@ -19,7 +19,15 @@ export const metadata: Metadata = pageMetadata({
 export default function ContactPage() {
   return (
     <>
-      <JsonLd data={getFAQPageSchema()} />
+      <JsonLd
+        data={[
+          getFAQPageSchema(),
+          getBreadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+        ]}
+      />
       <ContactPageClient />
     </>
   );

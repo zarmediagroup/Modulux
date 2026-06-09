@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Modular Homes Blog — Guides & Insights",
   description:
     "Expert guides on modular home costs, granny flat regulations, NHBRC compliance, and build timelines in South Africa.",
-};
+  path: "/blog",
+  keywords: [
+    "modular homes blog South Africa",
+    "granny flat regulations Western Cape",
+    "NHBRC modular homes guide",
+    "modular vs traditional build cost",
+  ],
+});
 
 export default function BlogPage() {
   return (

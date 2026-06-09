@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import InfoPage from "@/components/layout/InfoPage";
 import { siteConfig } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
   description: "MODULUX privacy policy — how we collect, use, and protect your personal information.",
-};
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

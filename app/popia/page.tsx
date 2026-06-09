@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import InfoPage from "@/components/layout/InfoPage";
 import { siteConfig } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "POPIA Compliance",
   description: "MODULUX compliance with the Protection of Personal Information Act (POPIA).",
-};
+  path: "/popia",
+});
 
 export default function PopiaPage() {
   return (
