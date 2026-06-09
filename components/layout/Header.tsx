@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Download } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { siteConfig } from "@/lib/site";
 
 const navLinks = [
   {
@@ -199,8 +200,8 @@ export default function Header() {
 
             {/* Mobile bottom CTA */}
             <div className="px-6 py-8 border-t border-white/10 space-y-4">
-              <p className="text-white/50 text-sm">+27 21 000 0000</p>
-              <p className="text-white/50 text-sm">info@modulux.co.za</p>
+              <p className="text-white/50 text-sm">{siteConfig.phoneDisplay}</p>
+              <p className="text-white/50 text-sm">{siteConfig.email}</p>
               <Link href="/contact" className="block">
                 <Button variant="primary" size="lg" className="w-full justify-center">
                   Contact Us

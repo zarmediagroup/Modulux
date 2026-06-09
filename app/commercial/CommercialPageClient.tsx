@@ -15,6 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
 import { aboutFactoryGallery, commercialGallery, siteImages } from "@/lib/images";
+import { siteConfig } from "@/lib/site";
 
 // ─── Data ──────────────────────────────────────────────────────────────────
 
@@ -528,12 +529,12 @@ export default function CommercialPageClient() {
 
               <div className="space-y-4">
                 <h3 className="font-bold text-[#1C1C1C] text-lg">Speak to Our Commercial Team</h3>
-                <a href="tel:+27210000000" className="flex items-center gap-3 group">
+                <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-3 group">
                   <div className="w-10 h-10 rounded-xl bg-[#F9F7F4] flex items-center justify-center">
                     <Phone size={16} className="text-[#C8A97E]" />
                   </div>
                   <span className="font-semibold text-[#1C1C1C] group-hover:text-[#C8A97E] transition-colors">
-                    +27 21 000 0000
+                    {siteConfig.phoneDisplay}
                   </span>
                 </a>
                 <a href="mailto:commercial@modulux.co.za" className="flex items-center gap-3 group">

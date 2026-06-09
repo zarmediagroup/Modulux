@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 const footerLinks = {
   Designs: [
@@ -51,11 +52,11 @@ export default function Footer() {
               The Modern Way of Housing. Precision-engineered modular homes built in Cape Town and delivered anywhere in South Africa.
             </p>
             <div className="mt-6 space-y-2">
-              <a href="tel:+27210000000" className="flex items-center gap-2 text-white/60 hover:text-[#C8A97E] text-sm transition-colors">
-                <Phone size={14} /> +27 21 000 0000
+              <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2 text-white/60 hover:text-[#C8A97E] text-sm transition-colors">
+                <Phone size={14} /> {siteConfig.phoneDisplay}
               </a>
-              <a href="mailto:info@modulux.co.za" className="flex items-center gap-2 text-white/60 hover:text-[#C8A97E] text-sm transition-colors">
-                <Mail size={14} /> info@modulux.co.za
+              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 text-white/60 hover:text-[#C8A97E] text-sm transition-colors">
+                <Mail size={14} /> {siteConfig.email}
               </a>
               <span className="flex items-center gap-2 text-white/60 text-sm">
                 <MapPin size={14} /> 12 Modular Way, Bellville, Cape Town, 7530

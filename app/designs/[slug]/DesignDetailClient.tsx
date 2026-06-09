@@ -17,6 +17,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { siteConfig } from "@/lib/site";
 
 interface Props {
   design: HomeDesign;
@@ -313,13 +314,13 @@ export default function DesignDetailClient({ design, related }: Props) {
 
                 <div className="mt-5 pt-5 border-t border-[#E5E0D8] space-y-2">
                   <a
-                    href="tel:+27210000000"
+                    href={`tel:${siteConfig.phone}`}
                     className="flex items-center gap-2 text-sm text-[#2D2D2D] hover:text-[#C8A97E] transition-colors"
                   >
-                    <Phone size={14} className="text-[#C8A97E]" /> +27 21 000 0000
+                    <Phone size={14} className="text-[#C8A97E]" /> {siteConfig.phoneDisplay}
                   </a>
                   <a
-                    href={`https://wa.me/27210000000?text=Hi%20MODULUX%2C%20I%27m%20interested%20in%20${encodeURIComponent(design.name)}`}
+                    href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20MODULUX%2C%20I%27m%20interested%20in%20${encodeURIComponent(design.name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-[#25D366] hover:text-[#1da850] transition-colors"

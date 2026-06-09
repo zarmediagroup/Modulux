@@ -6,8 +6,9 @@ export const siteConfig = {
   description:
     "MODULUX builds precision-engineered modular homes in Cape Town, South Africa. Beautifully designed, delivered fully finished, anywhere in South Africa.",
   email: "info@modulux.co.za",
-  phone: "+27210000000",
-  whatsapp: "27210000000",
+  phone: "+27729095837",
+  phoneDisplay: "072 909 5837",
+  whatsapp: "27729095837",
   address: {
     street: "12 Modular Way",
     city: "Bellville",

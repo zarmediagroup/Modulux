@@ -5,6 +5,7 @@ import { MapPin, Clock, Phone, Mail, ExternalLink } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import { siteConfig } from "@/lib/site";
 
 const hours = [
   { day: "Monday – Friday", time: "8:00am – 5:00pm" },
@@ -69,8 +70,8 @@ export default function DisplayVillageSection() {
                 </div>
                 <div>
                   <p className="font-semibold text-[#1C1C1C]">Phone</p>
-                  <a href="tel:+27210000000" className="text-[#7A7A7A] text-sm hover:text-[#C8A97E] transition-colors mt-0.5 block">
-                    +27 21 000 0000
+                  <a href={`tel:${siteConfig.phone}`} className="text-[#7A7A7A] text-sm hover:text-[#C8A97E] transition-colors mt-0.5 block">
+                    {siteConfig.phoneDisplay}
                   </a>
                 </div>
               </div>

@@ -1,11 +1,12 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
+import { siteConfig } from "@/lib/site";
 
 export function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/27210000000?text=Hi%20MODULUX%2C%20I%27m%20interested%20in%20your%20homes"
+      href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%20MODULUX%2C%20I%27m%20interested%20in%20your%20homes`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with MODULUX on WhatsApp"

@@ -9,6 +9,7 @@ import { Phone, Mail, MapPin, Clock, CheckCircle, ChevronDown } from "lucide-rea
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import { siteConfig } from "@/lib/site";
 
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -92,7 +93,7 @@ export default function ContactPageClient() {
       <div className="max-w-7xl mx-auto px-6 -mt-8 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { icon: Phone, label: "Call Us", value: "+27 21 000 0000", href: "tel:+27210000000" },
+            { icon: Phone, label: "Call Us", value: siteConfig.phoneDisplay, href: `tel:${siteConfig.phone}` },
             { icon: Mail, label: "Email Us", value: "info@modulux.co.za", href: "mailto:info@modulux.co.za" },
             { icon: MapPin, label: "Visit Us", value: "12 Modular Way, Bellville", href: "#map" },
             { icon: Clock, label: "Open", value: "Mon–Fri 8am–5pm", href: null },

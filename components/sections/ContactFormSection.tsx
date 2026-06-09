@@ -9,6 +9,7 @@ import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import { siteConfig } from "@/lib/site";
 
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -147,22 +148,22 @@ export default function ContactFormSection() {
             <div>
               <h3 className="text-xl font-bold text-[#1C1C1C] mb-4">Prefer to talk?</h3>
               <div className="space-y-4">
-                <a href="tel:+27210000000" className="flex items-center gap-4 group">
+                <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-4 group">
                   <div className="w-12 h-12 rounded-xl bg-[#F9F7F4] flex items-center justify-center">
                     <Phone size={18} className="text-[#C8A97E]" />
                   </div>
                   <div>
                     <p className="text-xs text-[#7A7A7A] uppercase tracking-wider">Phone</p>
-                    <p className="font-semibold text-[#1C1C1C] group-hover:text-[#C8A97E] transition-colors">+27 21 000 0000</p>
+                    <p className="font-semibold text-[#1C1C1C] group-hover:text-[#C8A97E] transition-colors">{siteConfig.phoneDisplay}</p>
                   </div>
                 </a>
-                <a href="mailto:info@modulux.co.za" className="flex items-center gap-4 group">
+                <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-4 group">
                   <div className="w-12 h-12 rounded-xl bg-[#F9F7F4] flex items-center justify-center">
                     <Mail size={18} className="text-[#C8A97E]" />
                   </div>
                   <div>
                     <p className="text-xs text-[#7A7A7A] uppercase tracking-wider">Email</p>
-                    <p className="font-semibold text-[#1C1C1C] group-hover:text-[#C8A97E] transition-colors">info@modulux.co.za</p>
+                    <p className="font-semibold text-[#1C1C1C] group-hover:text-[#C8A97E] transition-colors">{siteConfig.email}</p>
                   </div>
                 </a>
                 <div className="flex items-center gap-4">
