@@ -14,7 +14,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
-import { aboutFactoryGallery, commercialGallery, siteImages } from "@/lib/images";
+import { aboutFactoryGallery, commercialGallery, commercialSolutionImages, siteImages } from "@/lib/images";
 import { siteConfig } from "@/lib/site";
 
 // ─── Data ──────────────────────────────────────────────────────────────────
@@ -25,7 +25,7 @@ const solutions = [
     title: "Office Buildings",
     description:
       "Contemporary modular office spaces from single-room site offices to multi-storey commercial buildings. Fully fitted with electrical, data, HVAC, and ablutions.",
-    image: siteImages.hero,
+    image: commercialSolutionImages[0],
     features: ["Open-plan or cellular layouts", "Data & electrical reticulation", "Air conditioning ready", "Disabled access compliant"],
   },
   {
@@ -33,7 +33,7 @@ const solutions = [
     title: "Schools & Education",
     description:
       "Rapidly deployable classrooms, administration blocks, and full school campuses. SABS-compliant, energy-efficient, and designed for the African climate.",
-    image: siteImages.hero,
+    image: commercialSolutionImages[1],
     features: ["Single classrooms or full campuses", "SABS & DBE compliant", "Natural ventilation design", "Vandal-resistant options"],
   },
   {
@@ -41,7 +41,7 @@ const solutions = [
     title: "Clinics & Healthcare",
     description:
       "Purpose-built primary healthcare facilities, mobile clinics, and specialist treatment units. Designed to meet DoH specifications and infection control requirements.",
-    image: siteImages.hero,
+    image: commercialSolutionImages[2],
     features: ["DoH specification compliant", "Infection control design", "Pharmacy & consulting rooms", "Ablution blocks included"],
   },
   {
@@ -49,7 +49,7 @@ const solutions = [
     title: "Workforce Accommodation",
     description:
       "Mining, construction, and agricultural workforce camps. Dormitory-style or en-suite single rooms, with full dining, ablution, and recreational facilities.",
-    image: siteImages.hero,
+    image: commercialSolutionImages[3],
     features: ["Dormitory & en-suite options", "Dining & kitchen facilities", "Ablution blocks", "Site offices & recreation"],
   },
   {
@@ -57,7 +57,7 @@ const solutions = [
     title: "Relocatable Structures",
     description:
       "Need flexibility? Our relocatable modular buildings can be installed, demounted, and redeployed to a new site — ideal for temporary or seasonal operations.",
-    image: siteImages.hero,
+    image: commercialSolutionImages[4],
     features: ["Fully relocatable", "Rapid 2–5 day installation", "Hire or purchase options", "Nationwide deployment"],
   },
   {
@@ -65,7 +65,7 @@ const solutions = [
     title: "Retail & Hospitality",
     description:
       "Pop-up retail spaces, restaurants, lodges, and hospitality units. We've built everything from farm stalls to luxury bush lodges using modular construction.",
-    image: siteImages.hero,
+    image: commercialSolutionImages[5],
     features: ["Retail kiosks to full restaurants", "Lodge & chalet units", "Commercial kitchen ready", "Custom exterior finishes"],
   },
 ];

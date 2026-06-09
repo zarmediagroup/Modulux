@@ -1,4 +1,9 @@
-import { designImage, floorPlanImage } from "@/lib/images";
+import { getDesignMedia } from "@/lib/images";
+
+function media(slug: string) {
+  const { images, floorPlan } = getDesignMedia(slug);
+  return { images, floorPlanImage: floorPlan };
+}
 
 export type HomeDesign = {
   slug: string;
@@ -18,8 +23,6 @@ export type HomeDesign = {
   isFeatured: boolean;
   specifications: { label: string; value: string }[];
 };
-
-const hero = designImage("MODULUX modular home");
 
 export const designs: HomeDesign[] = [
   {
@@ -45,15 +48,7 @@ export const designs: HomeDesign[] = [
       "NHBRC registered & certified",
       "15-year structural warranty",
     ],
-    images: [
-      { ...hero, alt: "The Stellenbosch exterior" },
-      { ...hero, alt: "Open-plan living area" },
-      { ...hero, alt: "Modern kitchen" },
-      { ...hero, alt: "Master bedroom" },
-      { ...hero, alt: "En-suite bathroom" },
-      { ...hero, alt: "Covered patio" },
-    ],
-    floorPlanImage: floorPlanImage,
+    ...media("the-stellenbosch"),
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "145 m²" },
@@ -93,13 +88,7 @@ export const designs: HomeDesign[] = [
       "15-year structural warranty",
       "Delivered fully finished",
     ],
-    images: [
-      { ...hero, alt: "The Karoo exterior" },
-      { ...hero, alt: "Karoo living space" },
-      { ...hero, alt: "Karoo kitchen" },
-      { ...hero, alt: "Karoo bedroom" },
-    ],
-    floorPlanImage: floorPlanImage,
+    ...media("the-karoo"),
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "89 m²" },
@@ -141,15 +130,7 @@ export const designs: HomeDesign[] = [
       "NHBRC registered & certified",
       "15-year structural warranty",
     ],
-    images: [
-      { ...hero, alt: "The Blouberg exterior" },
-      { ...hero, alt: "Open plan living" },
-      { ...hero, alt: "Chef's kitchen" },
-      { ...hero, alt: "Master suite" },
-      { ...hero, alt: "Luxury master bathroom" },
-      { ...hero, alt: "Entertainment deck" },
-    ],
-    floorPlanImage: floorPlanImage,
+    ...media("the-blouberg"),
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "210 m²" },
@@ -189,13 +170,7 @@ export const designs: HomeDesign[] = [
       "NHBRC registered & certified",
       "15-year structural warranty",
     ],
-    images: [
-      { ...hero, alt: "The Constantia exterior" },
-      { ...hero, alt: "Living area" },
-      { ...hero, alt: "Bedroom" },
-      { ...hero, alt: "Bathroom" },
-    ],
-    floorPlanImage: floorPlanImage,
+    ...media("the-constantia"),
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "52 m²" },
@@ -235,14 +210,7 @@ export const designs: HomeDesign[] = [
       "NHBRC registered & certified",
       "15-year structural warranty",
     ],
-    images: [
-      { ...hero, alt: "The Franschhoek exterior" },
-      { ...hero, alt: "Living area with beams" },
-      { ...hero, alt: "Kitchen" },
-      { ...hero, alt: "Master suite" },
-      { ...hero, alt: "Covered stoep" },
-    ],
-    floorPlanImage: floorPlanImage,
+    ...media("the-franschhoek"),
     isFeatured: false,
     specifications: [
       { label: "Total Area", value: "168 m²" },
@@ -282,13 +250,7 @@ export const designs: HomeDesign[] = [
       "NHBRC registered & certified",
       "15-year structural warranty",
     ],
-    images: [
-      { ...hero, alt: "The Swartland exterior" },
-      { ...hero, alt: "Living area" },
-      { ...hero, alt: "Kitchen" },
-      { ...hero, alt: "Bedroom" },
-    ],
-    floorPlanImage: floorPlanImage,
+    ...media("the-swartland"),
     isFeatured: true,
     specifications: [
       { label: "Total Area", value: "112 m²" },
@@ -328,13 +290,7 @@ export const designs: HomeDesign[] = [
       "NHBRC registered & certified",
       "15-year structural warranty",
     ],
-    images: [
-      { ...hero, alt: "The Paarl exterior" },
-      { ...hero, alt: "Living space" },
-      { ...hero, alt: "Bedroom" },
-      { ...hero, alt: "Bathroom" },
-    ],
-    floorPlanImage: floorPlanImage,
+    ...media("the-paarl"),
     isFeatured: false,
     specifications: [
       { label: "Total Area", value: "65 m²" },

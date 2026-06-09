@@ -7,7 +7,7 @@ import { ArrowRight, Heart, Lightbulb, Shield, Users } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
-import { aboutFactoryGallery, siteImages } from "@/lib/images";
+import { aboutFactoryGallery, aboutMissionImage, commercialSolutionImages, siteImages } from "@/lib/images";
 
 const timeline = [
   { year: "2015", title: "MODULUX Founded", description: "Started in a small Cape Town workshop with a vision to make quality housing accessible to all South Africans." },
@@ -19,10 +19,10 @@ const timeline = [
 ];
 
 const team = [
-  { name: "Jacques van der Berg", title: "CEO & Founder",        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80" },
-  { name: "Nandi Dlamini",        title: "Head of Design",       image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&q=80" },
-  { name: "Marco Ferreira",       title: "Head of Construction", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80" },
-  { name: "Sipho Molefe",         title: "Sales Director",       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80" },
+  { name: "Jacques van der Berg", title: "CEO & Founder",        image: siteImages.hero },
+  { name: "Nandi Dlamini",        title: "Head of Design",       image: siteImages.showcase },
+  { name: "Marco Ferreira",       title: "Head of Construction", image: aboutMissionImage },
+  { name: "Sipho Molefe",         title: "Sales Director",       image: commercialSolutionImages[0] },
 ];
 
 const values = [
@@ -96,7 +96,7 @@ export default function AboutPageClient() {
               className="relative aspect-[4/3] rounded-2xl overflow-hidden"
             >
               <Image
-                src={siteImages.hero}
+                src={aboutMissionImage}
                 alt="MODULUX home exterior"
                 fill
                 className="object-cover object-[75%_center]"
