@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/terms`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/brochure`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/financing`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/popia`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/careers`, changeFrequency: "monthly", priority: 0.4 },
   ];
 
   const designPages: MetadataRoute.Sitemap = designs.map((d) => ({

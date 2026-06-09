@@ -9,7 +9,12 @@ import CookieBanner from "@/components/ui/CookieBanner";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import JsonLd from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
-import { getLocalBusinessSchema, getOrganizationSchema } from "@/lib/schema";
+import {
+  getLocalBusinessSchema,
+  getOrganizationSchema,
+  getServiceSchema,
+  getWebSiteSchema,
+} from "@/lib/schema";
 import { isMaintenanceMode } from "@/lib/maintenance";
 
 const inter = Inter({
@@ -35,9 +40,6 @@ export const metadata: Metadata = {
     "MODULUX",
   ],
   metadataBase: new URL(siteConfig.url),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "MODULUX — Modular Homes Cape Town",
     description: siteConfig.description,
@@ -45,6 +47,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: siteConfig.locale,
     type: "website",
+    images: [{ url: "/images/hero.png", alt: "MODULUX modular homes Cape Town" }],
+  },
+  other: {
+    "geo.region": "ZA-WC",
+    "geo.placename": "Bellville, Cape Town",
+    "geo.position": `${siteConfig.geo.latitude};${siteConfig.geo.longitude}`,
+    ICBM: `${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`,
   },
   twitter: {
     card: "summary_large_image",
@@ -73,7 +82,14 @@ export default async function RootLayout({
     <html lang="en-ZA" className={inter.variable}>
       <body>
         {showSiteChrome && (
-          <JsonLd data={[getOrganizationSchema(), getLocalBusinessSchema()]} />
+          <JsonLd
+            data={[
+              getOrganizationSchema(),
+              getWebSiteSchema(),
+              getLocalBusinessSchema(),
+              getServiceSchema(),
+            ]}
+          />
         )}
         {showSiteChrome && <Header />}
         <main>{children}</main>

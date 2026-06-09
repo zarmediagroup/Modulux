@@ -260,7 +260,7 @@ export default function AboutPageClient() {
                     src={img.src}
                     alt={`MODULUX factory image ${i + 1}`}
                     fill
-                    className={img.kind === "floorplan" ? "object-contain bg-[#F9F7F4] p-2" : "object-cover"}
+                    className="object-cover"
                     style={{ objectPosition: img.objectPosition }}
                     sizes="(max-width: 1024px) 50vw, 25vw"
                   />

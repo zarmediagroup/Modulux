@@ -12,10 +12,26 @@ export const siteConfig = {
   address: {
     street: "12 Modular Way",
     city: "Bellville",
-    region: "Cape Town",
+    region: "Western Cape",
     postalCode: "7530",
     country: "ZA",
   },
+  geo: {
+    latitude: -33.8803,
+    longitude: 18.6292,
+  },
+  openingHours: [
+    "Mo-Fr 08:00-17:00",
+    "Sa 09:00-13:00",
+  ],
+  serviceAreas: [
+    "Cape Town",
+    "Western Cape",
+    "Bellville",
+    "Stellenbosch",
+    "Paarl",
+    "South Africa",
+  ],
   social: {
     instagram: "https://instagram.com/modulux",
     facebook: "https://facebook.com/modulux",

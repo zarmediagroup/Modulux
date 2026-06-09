@@ -307,7 +307,7 @@ export default function CommercialPageClient() {
                     src={img.src}
                     alt={`Commercial project ${i + 1}`}
                     fill
-                    className={img.kind === "floorplan" ? "object-contain bg-[#F9F7F4] p-2" : "object-cover"}
+                    className="object-cover"
                     style={{ objectPosition: img.objectPosition }}
                     sizes="(max-width: 1024px) 50vw, 25vw"
                   />
@@ -410,9 +410,7 @@ export default function CommercialPageClient() {
                   src={src}
                   alt={`Commercial project ${i + 1}`}
                   fill
-                  className={`transition-transform duration-500 group-hover:scale-105 ${
-                    kind === "floorplan" ? "object-contain bg-[#F9F7F4] p-3" : "object-cover"
-                  }`}
+                  className="transition-transform duration-500 group-hover:scale-105 object-cover"
                   style={{ objectPosition }}
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />

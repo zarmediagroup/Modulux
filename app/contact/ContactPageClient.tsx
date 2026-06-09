@@ -10,6 +10,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
+import { moduluxFaqs } from "@/lib/faqs";
 
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -25,28 +26,7 @@ type FormData = z.infer<typeof schema>;
 const provinces = ["Western Cape", "Gauteng", "KwaZulu-Natal", "Eastern Cape", "Limpopo", "Mpumalanga", "Northern Cape", "North West", "Free State"];
 const interests = ["Standard Range", "Premium Range", "Granny Flat", "Not Sure Yet"];
 
-const faqs = [
-  {
-    q: "How long does it take to build and deliver a MODULUX home?",
-    a: "From order confirmation to delivery, most MODULUX homes are completed in 60–90 days. The exact timeline depends on the design, customisation options, and your location. We'll provide a detailed schedule at the start of your project.",
-  },
-  {
-    q: "Can I customise the design?",
-    a: "Yes, absolutely. While our designs are complete homes in their own right, our team can work with you to customise finishes, fixtures, colours, and select internal layouts. Some structural changes may also be possible depending on the model.",
-  },
-  {
-    q: "Do you deliver anywhere in South Africa?",
-    a: "Yes, MODULUX delivers nationwide across all nine provinces. Delivery costs are calculated based on your location and will be included in your detailed quote.",
-  },
-  {
-    q: "Is financing available?",
-    a: "MODULUX homes can be financed through most major South African banks and financial institutions. We can connect you with our preferred bond originators to explore your options.",
-  },
-  {
-    q: "What warranty do MODULUX homes come with?",
-    a: "All MODULUX homes carry a 15-year structural warranty and are NHBRC registered. We also provide a 1-year workmanship warranty and use manufacturers' warranties on all installed appliances and fittings.",
-  },
-];
+const faqs = moduluxFaqs;
 
 export default function ContactPageClient() {
   const [submitted, setSubmitted] = useState(false);
