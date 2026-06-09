@@ -14,7 +14,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
-import { aboutFactoryGallery, commercialGallery, commercialSolutionImages, siteImages } from "@/lib/images";
+import { aboutFactoryGallery, commercialContactImage, commercialGallery, commercialHeroImage, commercialSolutionImages } from "@/lib/images";
 import { siteConfig } from "@/lib/site";
 
 // ─── Data ──────────────────────────────────────────────────────────────────
@@ -129,7 +129,7 @@ export default function CommercialPageClient() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
         <Image
-          src={siteImages.hero}
+          src={commercialHeroImage}
           alt="MODULUX modular commercial building"
           fill
           priority
@@ -307,7 +307,7 @@ export default function CommercialPageClient() {
                     src={img.src}
                     alt={`Commercial project ${i + 1}`}
                     fill
-                    className="object-cover"
+                    className={img.kind === "floorplan" ? "object-contain bg-[#F9F7F4] p-2" : "object-cover"}
                     style={{ objectPosition: img.objectPosition }}
                     sizes="(max-width: 1024px) 50vw, 25vw"
                   />
@@ -396,7 +396,7 @@ export default function CommercialPageClient() {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {commercialGallery.map(({ src, span, objectPosition }, i) => (
+            {commercialGallery.map(({ src, span, objectPosition, kind }, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.96 }}
@@ -410,7 +410,9 @@ export default function CommercialPageClient() {
                   src={src}
                   alt={`Commercial project ${i + 1}`}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`transition-transform duration-500 group-hover:scale-105 ${
+                    kind === "floorplan" ? "object-contain bg-[#F9F7F4] p-3" : "object-cover"
+                  }`}
                   style={{ objectPosition }}
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
@@ -513,7 +515,7 @@ export default function CommercialPageClient() {
             >
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src={siteImages.hero}
+                  src={commercialContactImage}
                   alt="MODULUX modular commercial building"
                   fill
                   className="object-cover object-[75%_center]"

@@ -1,8 +1,8 @@
 import { getDesignMedia } from "@/lib/images";
 
 function media(slug: string) {
-  const { images, floorPlan } = getDesignMedia(slug);
-  return { images, floorPlanImage: floorPlan };
+  const { images, floorPlan, cardImage } = getDesignMedia(slug);
+  return { images, floorPlanImage: floorPlan, cardImage };
 }
 
 export type HomeDesign = {
@@ -18,7 +18,8 @@ export type HomeDesign = {
   category: "Standard" | "Premium" | "Granny Flat";
   description: string;
   features: string[];
-  images: { src: string; alt: string }[];
+  cardImage: string;
+  images: { src: string; alt: string; kind?: "photo" | "floorplan" }[];
   floorPlanImage: string;
   isFeatured: boolean;
   specifications: { label: string; value: string }[];

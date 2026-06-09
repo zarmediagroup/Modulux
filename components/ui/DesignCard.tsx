@@ -13,6 +13,8 @@ interface DesignCardProps {
 }
 
 export function DesignCard({ design, index = 0 }: DesignCardProps) {
+  const cardKind = design.images.find((img) => img.src === design.cardImage)?.kind;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -25,10 +27,12 @@ export function DesignCard({ design, index = 0 }: DesignCardProps) {
           {/* Image */}
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
-              src={design.images[0].src}
-              alt={design.images[0].alt}
+              src={design.cardImage}
+              alt={design.name}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className={`transition-transform duration-500 group-hover:scale-105 ${
+                cardKind === "floorplan" ? "object-contain bg-[#F9F7F4] p-2" : "object-cover"
+              }`}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             {/* Hover overlay */}

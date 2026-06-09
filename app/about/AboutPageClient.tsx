@@ -7,7 +7,7 @@ import { ArrowRight, Heart, Lightbulb, Shield, Users } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
-import { aboutFactoryGallery, aboutMissionImage, commercialSolutionImages, siteImages } from "@/lib/images";
+import { aboutFactoryGallery, aboutHeroImage, aboutMissionImage, teamImages } from "@/lib/images";
 
 const timeline = [
   { year: "2015", title: "MODULUX Founded", description: "Started in a small Cape Town workshop with a vision to make quality housing accessible to all South Africans." },
@@ -19,10 +19,10 @@ const timeline = [
 ];
 
 const team = [
-  { name: "Jacques van der Berg", title: "CEO & Founder",        image: siteImages.hero },
-  { name: "Nandi Dlamini",        title: "Head of Design",       image: siteImages.showcase },
-  { name: "Marco Ferreira",       title: "Head of Construction", image: aboutMissionImage },
-  { name: "Sipho Molefe",         title: "Sales Director",       image: commercialSolutionImages[0] },
+  { name: "Jacques van der Berg", title: "CEO & Founder",        image: teamImages[0] },
+  { name: "Nandi Dlamini",        title: "Head of Design",       image: teamImages[1] },
+  { name: "Marco Ferreira",       title: "Head of Construction", image: teamImages[2] },
+  { name: "Sipho Molefe",         title: "Sales Director",       image: teamImages[3] },
 ];
 
 const values = [
@@ -40,7 +40,7 @@ export default function AboutPageClient() {
       {/* Hero */}
       <div className="relative min-h-[60vh] flex items-end bg-[#1C1C1C] overflow-hidden">
         <Image
-          src={siteImages.hero}
+          src={aboutHeroImage}
           alt="MODULUX modular home"
           fill
           priority
@@ -260,7 +260,7 @@ export default function AboutPageClient() {
                     src={img.src}
                     alt={`MODULUX factory image ${i + 1}`}
                     fill
-                    className="object-cover"
+                    className={img.kind === "floorplan" ? "object-contain bg-[#F9F7F4] p-2" : "object-cover"}
                     style={{ objectPosition: img.objectPosition }}
                     sizes="(max-width: 1024px) 50vw, 25vw"
                   />

@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, Clock, Phone, Mail, ExternalLink } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
+import { displayVillageImages } from "@/lib/images";
 
 const hours = [
   { day: "Monday – Friday", time: "8:00am – 5:00pm" },
@@ -32,6 +34,21 @@ export default function DisplayVillageSection() {
             <p className="text-[#7A7A7A] leading-relaxed mb-8">
               Nothing beats walking through a real MODULUX home. Visit our Display Village in Bellville to see the quality, finishes, and spatial proportions for yourself. Our team will be on hand to answer every question.
             </p>
+
+            {/* On-site units */}
+            <div className="grid grid-cols-2 gap-3 mb-8">
+              {displayVillageImages.map((img) => (
+                <div key={img.src} className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+              ))}
+            </div>
 
             {/* Details */}
             <div className="space-y-5">
@@ -109,8 +126,7 @@ export default function DisplayVillageSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-square bg-[#F0EDE8] flex items-center justify-center border border-[#E5E0D8]">
-              {/* Map placeholder — replace with actual iframe */}
+            <div className="relative rounded-2xl overflow-hidden aspect-square bg-[#F0EDE8] border border-[#E5E0D8]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.2!2d18.6299!3d-33.9258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5bb78b8b0001%3A0x1234!2sBellville%2C+Cape+Town!5e0!3m2!1sen!2sza!4v1"
                 width="100%"
@@ -121,15 +137,6 @@ export default function DisplayVillageSection() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="MODULUX Display Village Location"
               />
-              <div className="absolute inset-0 bg-[#F0EDE8] flex flex-col items-center justify-center gap-4 z-10 pointer-events-none">
-                <div className="w-14 h-14 rounded-full bg-[#1C1C1C] flex items-center justify-center">
-                  <MapPin size={24} className="text-[#C8A97E]" />
-                </div>
-                <div className="text-center">
-                  <p className="font-bold text-[#1C1C1C]">Display Village</p>
-                  <p className="text-sm text-[#7A7A7A]">Bellville, Cape Town</p>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -137,4 +144,3 @@ export default function DisplayVillageSection() {
     </section>
   );
 }
-

@@ -46,7 +46,9 @@ export default function GallerySection() {
                 src={img.src}
                 alt={img.alt}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className={`transition-transform duration-500 group-hover:scale-105 ${
+                  img.kind === "floorplan" ? "object-contain bg-[#F9F7F4] p-3" : "object-cover"
+                }`}
                 style={{ objectPosition: img.objectPosition }}
                 sizes="(max-width: 768px) 50vw, 33vw"
               />

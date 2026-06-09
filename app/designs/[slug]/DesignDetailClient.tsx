@@ -136,7 +136,11 @@ export default function DesignDetailClient({ design, related }: Props) {
                 alt={design.images[0].alt}
                 fill
                 priority
-                className="object-cover hover:scale-105 transition-transform duration-500"
+                className={`hover:scale-105 transition-transform duration-500 ${
+                  design.images[0].kind === "floorplan"
+                    ? "object-contain bg-[#F9F7F4] p-4"
+                    : "object-cover"
+                }`}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
@@ -153,7 +157,13 @@ export default function DesignDetailClient({ design, related }: Props) {
                     i === 0 ? "border-[#C8A97E]" : "border-transparent hover:border-[#C8A97E]"
                   }`}
                 >
-                  <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="96px" />
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className={img.kind === "floorplan" ? "object-contain bg-[#F9F7F4] p-1" : "object-cover"}
+                    sizes="96px"
+                  />
                 </button>
               ))}
             </div>

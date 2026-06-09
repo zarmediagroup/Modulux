@@ -35,116 +35,166 @@ export const siteImages = {
   showcase: publicImage("ChatGPT Image Jun 6, 2026, 07_47_20 PM.png"),
 } as const;
 
+export type ImageEntry = {
+  src: string;
+  alt: string;
+  kind?: "photo" | "floorplan";
+};
+
 export const productLineImages = {
-  grannyFlat: foldingHouses.ft10.render,
-  standard: foldingHouses.ft20.render,
+  grannyFlat: foldingHouses.ft10.stages,
+  standard: foldingHouses.ft20.structure,
   premium: foldingHouses.ft40.render,
 } as const;
 
-type ImageEntry = { src: string; alt: string };
+type DesignMedia = {
+  cardImage: string;
+  images: ImageEntry[];
+  floorPlan: string;
+};
 
-const designMedia: Record<
-  string,
-  { images: ImageEntry[]; floorPlan: string }
-> = {
+const designMedia: Record<string, DesignMedia> = {
   "the-constantia": {
+    cardImage: foldingHouses.ft10.render,
     images: [
-      { src: foldingHouses.ft10.render, alt: "The Constantia — 10ft double-wing exterior" },
-      { src: foldingHouses.ft10.stages, alt: "The Constantia — build stages" },
-      { src: foldingHouses.ft10.floorPlan, alt: "The Constantia — floor plan" },
+      { src: foldingHouses.ft10.render, alt: "The Constantia — 10ft double-wing exterior", kind: "photo" },
+      { src: foldingHouses.ft10.stages, alt: "The Constantia — build stages", kind: "photo" },
+      { src: foldingHouses.ft10.floorPlan, alt: "The Constantia — floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft10.floorPlan,
   },
   "the-paarl": {
+    cardImage: foldingHouses.ft10.stages,
     images: [
-      { src: foldingHouses.ft10.render, alt: "The Paarl — 10ft double-wing exterior" },
-      { src: foldingHouses.ft10.stages, alt: "The Paarl — development stages" },
-      { src: foldingHouses.ft10.floorPlan, alt: "The Paarl — floor plan" },
+      { src: foldingHouses.ft10.stages, alt: "The Paarl — development stages", kind: "photo" },
+      { src: foldingHouses.ft10.render, alt: "The Paarl — 10ft double-wing exterior", kind: "photo" },
+      { src: foldingHouses.ft10.floorPlan, alt: "The Paarl — floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft10.floorPlan,
   },
   "the-karoo": {
+    cardImage: foldingHouses.ft20.render,
     images: [
-      { src: foldingHouses.ft20.render, alt: "The Karoo — 20ft double-wing exterior" },
-      { src: foldingHouses.ft20.structure, alt: "The Karoo — structure details" },
-      { src: foldingHouses.ft20.floorPlan, alt: "The Karoo — floor plan" },
+      { src: foldingHouses.ft20.render, alt: "The Karoo — 20ft double-wing exterior", kind: "photo" },
+      { src: foldingHouses.ft20.structure, alt: "The Karoo — structure details", kind: "photo" },
+      { src: foldingHouses.ft20.floorPlan, alt: "The Karoo — floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft20.floorPlan,
   },
   "the-swartland": {
+    cardImage: foldingHouses.ft20.structure,
     images: [
-      { src: foldingHouses.ft20.render, alt: "The Swartland — 20ft double-wing exterior" },
-      { src: foldingHouses.ft20.structure, alt: "The Swartland — structure details" },
-      { src: foldingHouses.ft20.floorPlan, alt: "The Swartland — floor plan" },
+      { src: foldingHouses.ft20.structure, alt: "The Swartland — structure details", kind: "photo" },
+      { src: foldingHouses.ft20.render, alt: "The Swartland — 20ft double-wing exterior", kind: "photo" },
+      { src: foldingHouses.ft20.floorPlan, alt: "The Swartland — floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft20.floorPlan,
   },
   "the-stellenbosch": {
+    cardImage: foldingHouses.ft30.render,
     images: [
-      { src: foldingHouses.ft30.render, alt: "The Stellenbosch — 30ft double-wing exterior" },
-      { src: foldingHouses.ft30.floorPlan, alt: "The Stellenbosch — floor plan" },
+      { src: foldingHouses.ft30.render, alt: "The Stellenbosch — 30ft double-wing exterior", kind: "photo" },
+      { src: foldingHouses.ft30.floorPlan, alt: "The Stellenbosch — floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft30.floorPlan,
   },
   "the-franschhoek": {
+    cardImage: foldingHouses.ft30.floorPlan,
     images: [
-      { src: foldingHouses.ft30.render, alt: "The Franschhoek — 30ft double-wing exterior" },
-      { src: foldingHouses.ft30.floorPlan, alt: "The Franschhoek — floor plan" },
+      { src: foldingHouses.ft30.floorPlan, alt: "The Franschhoek — floor plan", kind: "floorplan" },
+      { src: foldingHouses.ft30.render, alt: "The Franschhoek — 30ft double-wing exterior", kind: "photo" },
     ],
     floorPlan: foldingHouses.ft30.floorPlan,
   },
   "the-blouberg": {
+    cardImage: foldingHouses.ft40.render,
     images: [
-      { src: foldingHouses.ft40.render, alt: "The Blouberg — 40ft double-wing exterior" },
-      { src: foldingHouses.ft40.floorPlan, alt: "The Blouberg — floor plan" },
+      { src: foldingHouses.ft40.render, alt: "The Blouberg — 40ft double-wing exterior", kind: "photo" },
+      { src: foldingHouses.ft40.floorPlan, alt: "The Blouberg — floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft40.floorPlan,
   },
 };
 
-const defaultMedia = {
-  images: [{ src: siteImages.hero, alt: "MODULUX modular home" }],
+const defaultMedia: DesignMedia = {
+  cardImage: siteImages.hero,
+  images: [{ src: siteImages.hero, alt: "MODULUX modular home", kind: "photo" }],
   floorPlan: siteImages.hero,
 };
 
-export function getDesignMedia(slug: string) {
+export function getDesignMedia(slug: string): DesignMedia {
   return designMedia[slug] ?? defaultMedia;
 }
 
-export const galleryImages = [
-  { src: siteImages.hero, alt: "MODULUX modular home exterior", span: "row-span-1", objectPosition: "75% center" },
-  { src: foldingHouses.ft40.render, alt: "40ft double-wing folding house", span: "row-span-2", objectPosition: "center" },
-  { src: foldingHouses.ft30.render, alt: "30ft double-wing folding house", span: "row-span-1", objectPosition: "center" },
-  { src: foldingHouses.ft20.render, alt: "20ft double-wing folding house", span: "row-span-1", objectPosition: "center" },
-  { src: foldingHouses.ft10.render, alt: "10ft granny flat unit", span: "row-span-1", objectPosition: "center" },
-  { src: foldingHouses.ft40.floorPlan, alt: "40ft modular unit floor plan", span: "row-span-2", objectPosition: "center" },
-  { src: foldingHouses.ft20.structure, alt: "MODULUX structure engineering", span: "row-span-1", objectPosition: "center" },
-  { src: siteImages.showcase, alt: "MODULUX folding house on site", span: "row-span-1", objectPosition: "center" },
+/** Every unique product image — used across homepage gallery and display village. */
+export const allProductImages = [
+  { src: siteImages.hero, alt: "MODULUX modular home hero", span: "row-span-1", objectPosition: "75% center", kind: "photo" as const },
+  { src: siteImages.showcase, alt: "MODULUX folding house on site", span: "row-span-1", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft10.render, alt: "10ft double-wing folding house", span: "row-span-1", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft10.stages, alt: "10ft unit development stages", span: "row-span-2", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft10.floorPlan, alt: "10ft floor plan", span: "row-span-1", objectPosition: "center", kind: "floorplan" as const },
+  { src: foldingHouses.ft20.render, alt: "20ft double-wing folding house", span: "row-span-1", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft20.structure, alt: "20ft structure engineering", span: "row-span-1", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft20.floorPlan, alt: "20ft floor plan", span: "row-span-2", objectPosition: "center", kind: "floorplan" as const },
+  { src: foldingHouses.ft30.render, alt: "30ft double-wing folding house", span: "row-span-1", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft30.floorPlan, alt: "30ft floor plan", span: "row-span-1", objectPosition: "center", kind: "floorplan" as const },
+  { src: foldingHouses.ft40.render, alt: "40ft double-wing folding house", span: "row-span-2", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft40.floorPlan, alt: "40ft floor plan", span: "row-span-1", objectPosition: "center", kind: "floorplan" as const },
+] as const;
+
+export const galleryImages = allProductImages;
+
+export const displayVillageImages = [
+  { src: foldingHouses.ft10.render, alt: "10ft display unit" },
+  { src: foldingHouses.ft20.render, alt: "20ft display unit" },
+  { src: foldingHouses.ft30.render, alt: "30ft display unit" },
+  { src: foldingHouses.ft40.render, alt: "40ft display unit" },
 ] as const;
 
 export const aboutFactoryGallery = [
-  { src: foldingHouses.ft20.structure, objectPosition: "center" },
-  { src: foldingHouses.ft10.stages, objectPosition: "center" },
-  { src: foldingHouses.ft30.render, objectPosition: "center" },
-  { src: foldingHouses.ft40.render, objectPosition: "center" },
+  { src: foldingHouses.ft20.structure, objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft10.stages, objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft30.render, objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft40.floorPlan, objectPosition: "center", kind: "floorplan" as const },
 ] as const;
 
 export const commercialGallery = [
-  { src: foldingHouses.ft40.render, span: "col-span-2 row-span-2", objectPosition: "center" },
-  { src: foldingHouses.ft30.render, span: "", objectPosition: "center" },
-  { src: foldingHouses.ft20.render, span: "", objectPosition: "center" },
-  { src: foldingHouses.ft40.floorPlan, span: "", objectPosition: "center" },
-  { src: siteImages.showcase, span: "", objectPosition: "center" },
+  { src: siteImages.showcase, span: "col-span-2 row-span-2", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft40.render, span: "", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft30.render, span: "", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft20.render, span: "", objectPosition: "center", kind: "photo" as const },
+  { src: foldingHouses.ft20.floorPlan, span: "", objectPosition: "center", kind: "floorplan" as const },
+  { src: foldingHouses.ft10.stages, span: "", objectPosition: "center", kind: "photo" as const },
 ] as const;
 
 export const commercialSolutionImages = [
   foldingHouses.ft40.render,
   foldingHouses.ft30.render,
   foldingHouses.ft20.render,
-  foldingHouses.ft40.floorPlan,
   foldingHouses.ft20.structure,
   foldingHouses.ft10.render,
+  foldingHouses.ft10.stages,
 ] as const;
 
+export const commercialHeroImage = siteImages.showcase;
+export const commercialContactImage = foldingHouses.ft40.render;
+export const aboutHeroImage = siteImages.hero;
 export const aboutMissionImage = foldingHouses.ft30.render;
 export const aboutSectionImage = foldingHouses.ft20.structure;
+export const displayVillageBannerImage = siteImages.showcase;
+
+export const teamImages = [
+  foldingHouses.ft10.render,
+  foldingHouses.ft20.render,
+  foldingHouses.ft30.render,
+  foldingHouses.ft40.render,
+] as const;
+
+export function isFloorPlanImage(src: string) {
+  return (
+    src === foldingHouses.ft10.floorPlan ||
+    src === foldingHouses.ft20.floorPlan ||
+    src === foldingHouses.ft30.floorPlan ||
+    src === foldingHouses.ft40.floorPlan
+  );
+}
