@@ -9,11 +9,13 @@ import DesignCard from "@/components/ui/DesignCard";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-type BedFilter = "All" | "1" | "2" | "3" | "4+";
-type CatFilter = "All" | "Standard" | "Premium" | "Granny Flat";
+import { designCategories } from "@/lib/designs";
 
-const bedTabs: BedFilter[] = ["All", "1", "2", "3", "4+"];
-const catTabs: CatFilter[] = ["All", "Standard", "Premium", "Granny Flat"];
+type BedFilter = "All" | "1" | "2" | "3";
+type CatFilter = "All" | (typeof designCategories)[number];
+
+const bedTabs: BedFilter[] = ["All", "1", "2", "3"];
+const catTabs: CatFilter[] = ["All", ...designCategories];
 
 export default function FeaturedDesignsSection() {
   const [bedFilter, setBedFilter] = useState<BedFilter>("All");
@@ -21,8 +23,7 @@ export default function FeaturedDesignsSection() {
 
   const filtered = designs.filter((d) => {
     const bedMatch =
-      bedFilter === "All" ||
-      (bedFilter === "4+" ? d.bedrooms >= 4 : d.bedrooms === parseInt(bedFilter));
+      bedFilter === "All" || d.bedrooms === parseInt(bedFilter);
     const catMatch = catFilter === "All" || d.category === catFilter;
     return bedMatch && catMatch;
   });
@@ -40,7 +41,7 @@ export default function FeaturedDesignsSection() {
         >
           <SectionLabel>OUR DESIGNS</SectionLabel>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
-            <SectionHeading sub="Browse our full range of beautifully engineered modular homes.">
+            <SectionHeading sub="Browse our 10ft, 20ft, 30ft, and 40ft double-wing folding homes.">
               Homes Built for Real Life
             </SectionHeading>
             <Link
@@ -89,7 +90,7 @@ export default function FeaturedDesignsSection() {
                     : "bg-white text-[#7A7A7A] border border-[#E5E0D8] hover:border-[#C8A97E]"
                 }`}
               >
-                {tab}
+                {tab === "All" ? "All Sizes" : `${tab}`}
               </button>
             ))}
           </div>

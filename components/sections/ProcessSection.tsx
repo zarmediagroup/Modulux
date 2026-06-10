@@ -11,7 +11,7 @@ const steps = [
     icon: Search,
     title: "Choose Your Design",
     description:
-      "Browse our carefully curated range of Standard, Premium, and Granny Flat designs. Find the layout and aesthetic that fits your lifestyle and stand size.",
+      "Browse our 10ft, 20ft, 30ft, and 40ft double-wing folding homes. Choose the size and layout that fits your stand and budget.",
   },
   {
     number: "02",

@@ -1,11 +1,27 @@
 import type { NextConfig } from "next";
 
+const designRedirects = [
+  { source: "/designs/the-constantia", destination: "/designs/10ft-double-wing-folding-home", permanent: true },
+  { source: "/designs/the-paarl", destination: "/designs/10ft-double-wing-folding-home", permanent: true },
+  { source: "/designs/the-karoo", destination: "/designs/20ft-double-wing-folding-home", permanent: true },
+  { source: "/designs/the-swartland", destination: "/designs/20ft-double-wing-folding-home", permanent: true },
+  { source: "/designs/the-stellenbosch", destination: "/designs/30ft-double-wing-folding-home", permanent: true },
+  { source: "/designs/the-franschhoek", destination: "/designs/30ft-double-wing-folding-home", permanent: true },
+  { source: "/designs/the-blouberg", destination: "/designs/40ft-double-wing-folding-home", permanent: true },
+  { source: "/designs", has: [{ type: "query" as const, key: "category", value: "Standard" }], destination: "/designs/20ft-double-wing-folding-home", permanent: true },
+  { source: "/designs", has: [{ type: "query" as const, key: "category", value: "Premium" }], destination: "/designs/40ft-double-wing-folding-home", permanent: true },
+  { source: "/designs", has: [{ type: "query" as const, key: "category", value: "Granny Flat" }], destination: "/designs/10ft-double-wing-folding-home", permanent: true },
+];
+
 const nextConfig: NextConfig = {
   env: {
     MAINTENANCE_MODE: process.env.MAINTENANCE_MODE,
   },
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
+  },
+  async redirects() {
+    return designRedirects;
   },
   images: {
     formats: ["image/avif", "image/webp"],

@@ -52,66 +52,39 @@ type DesignMedia = {
 };
 
 const designMedia: Record<string, DesignMedia> = {
-  "the-constantia": {
+  "10ft-double-wing-folding-home": {
     cardImage: foldingHouses.ft10.render,
     images: [
-      { src: foldingHouses.ft10.render, alt: "The Constantia — 10ft double-wing exterior", kind: "photo" },
-      { src: siteImages.showcase, alt: "The Constantia — modular home on site", kind: "photo" },
-      { src: foldingHouses.ft10.floorPlan, alt: "The Constantia — floor plan", kind: "floorplan" },
+      { src: foldingHouses.ft10.render, alt: "10ft Double-Wing Folding Home exterior", kind: "photo" },
+      { src: siteImages.showcase, alt: "10ft folding home on site", kind: "photo" },
+      { src: foldingHouses.ft10.floorPlan, alt: "10ft Double-Wing floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft10.floorPlan,
   },
-  "the-paarl": {
-    cardImage: foldingHouses.ft10.render,
-    images: [
-      { src: foldingHouses.ft10.render, alt: "The Paarl — 10ft double-wing exterior", kind: "photo" },
-      { src: siteImages.hero, alt: "The Paarl — lifestyle exterior", kind: "photo" },
-      { src: foldingHouses.ft10.floorPlan, alt: "The Paarl — floor plan", kind: "floorplan" },
-    ],
-    floorPlan: foldingHouses.ft10.floorPlan,
-  },
-  "the-karoo": {
+  "20ft-double-wing-folding-home": {
     cardImage: foldingHouses.ft20.render,
     images: [
-      { src: foldingHouses.ft20.render, alt: "The Karoo — 20ft double-wing exterior", kind: "photo" },
-      { src: siteImages.showcase, alt: "The Karoo — modular home on site", kind: "photo" },
-      { src: foldingHouses.ft20.floorPlan, alt: "The Karoo — floor plan", kind: "floorplan" },
+      { src: foldingHouses.ft20.render, alt: "20ft Double-Wing Folding Home exterior", kind: "photo" },
+      { src: siteImages.hero, alt: "20ft folding home lifestyle render", kind: "photo" },
+      { src: foldingHouses.ft20.floorPlan, alt: "20ft Double-Wing floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft20.floorPlan,
   },
-  "the-swartland": {
-    cardImage: foldingHouses.ft20.render,
-    images: [
-      { src: foldingHouses.ft20.render, alt: "The Swartland — 20ft double-wing exterior", kind: "photo" },
-      { src: siteImages.hero, alt: "The Swartland — lifestyle exterior", kind: "photo" },
-      { src: foldingHouses.ft20.floorPlan, alt: "The Swartland — floor plan", kind: "floorplan" },
-    ],
-    floorPlan: foldingHouses.ft20.floorPlan,
-  },
-  "the-stellenbosch": {
+  "30ft-double-wing-folding-home": {
     cardImage: foldingHouses.ft30.render,
     images: [
-      { src: foldingHouses.ft30.render, alt: "The Stellenbosch — 30ft double-wing exterior", kind: "photo" },
-      { src: siteImages.showcase, alt: "The Stellenbosch — modular home on site", kind: "photo" },
-      { src: foldingHouses.ft30.floorPlan, alt: "The Stellenbosch — floor plan", kind: "floorplan" },
+      { src: foldingHouses.ft30.render, alt: "30ft Double-Wing Folding Home exterior", kind: "photo" },
+      { src: siteImages.showcase, alt: "30ft folding home on site", kind: "photo" },
+      { src: foldingHouses.ft30.floorPlan, alt: "30ft Double-Wing floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft30.floorPlan,
   },
-  "the-franschhoek": {
-    cardImage: foldingHouses.ft30.render,
-    images: [
-      { src: foldingHouses.ft30.render, alt: "The Franschhoek — 30ft double-wing exterior", kind: "photo" },
-      { src: siteImages.hero, alt: "The Franschhoek — lifestyle exterior", kind: "photo" },
-      { src: foldingHouses.ft30.floorPlan, alt: "The Franschhoek — floor plan", kind: "floorplan" },
-    ],
-    floorPlan: foldingHouses.ft30.floorPlan,
-  },
-  "the-blouberg": {
+  "40ft-double-wing-folding-home": {
     cardImage: foldingHouses.ft40.render,
     images: [
-      { src: foldingHouses.ft40.render, alt: "The Blouberg — 40ft double-wing exterior", kind: "photo" },
-      { src: siteImages.showcase, alt: "The Blouberg — modular home on site", kind: "photo" },
-      { src: foldingHouses.ft40.floorPlan, alt: "The Blouberg — floor plan", kind: "floorplan" },
+      { src: foldingHouses.ft40.render, alt: "40ft Double-Wing Folding Home exterior", kind: "photo" },
+      { src: siteImages.showcase, alt: "40ft folding home on site", kind: "photo" },
+      { src: foldingHouses.ft40.floorPlan, alt: "40ft Double-Wing floor plan", kind: "floorplan" },
     ],
     floorPlan: foldingHouses.ft40.floorPlan,
   },

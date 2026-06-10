@@ -1,6 +1,6 @@
-# MODULUX — Modular Homes Cape Town, South Africa
+# MODULUX — Double-Wing Folding Homes, Cape Town, South Africa
 
-> MODULUX builds precision-engineered, NHBRC-registered modular homes in Cape Town and delivers nationwide across South Africa. Granny flats from R620,000. Display Village in Bellville, Western Cape.
+> MODULUX builds precision-engineered, NHBRC-registered double-wing folding homes in Cape Town and delivers nationwide across South Africa. From R35,000. Display Village in Bellville, Western Cape.
 
 ## Company
 
@@ -12,17 +12,26 @@
 - **Location:** 12 Modular Way, Bellville, Western Cape, 7530, South Africa
 - **Service area:** Cape Town, Western Cape, and all nine provinces of South Africa
 
-## What we do
+## Product range
 
-MODULUX manufactures modular (prefab) homes in a Cape Town factory and delivers them fully finished to customer stands. We offer Standard, Premium, and Granny Flat designs from 10ft to 40ft double-wing folding units. All homes are NHBRC registered with a 15-year structural warranty.
+| Model | Price | Beds | Baths | Area |
+|-------|-------|------|-------|------|
+| 10ft Double-Wing Folding Home | R35,000 | 1 | 1 | 19.08 m² |
+| 20ft Double-Wing Folding Home | R55,000 | 2 | 1 | 37.52 m² |
+| 30ft Double-Wing Folding Home | R80,000 | 3 | 1 | 57.24 m² |
+| 40ft Single Double-Wing Folding Home | R90,000 | 3 | 1 | 75.05 m² |
+
+All models feature a spacious bedroom layout, open-plan lounge and kitchen, fully equipped bathroom, and an expandable double-wing design that deploys within minutes.
 
 ## Key pages
 
 - Home: https://www.modulux.co.za/
 - Designs & pricing: https://www.modulux.co.za/designs
-- Display Village (showroom): https://www.modulux.co.za/display-village
-- Commercial projects: https://www.modulux.co.za/commercial
-- About: https://www.modulux.co.za/about
+- 10ft model: https://www.modulux.co.za/designs/10ft-double-wing-folding-home
+- 20ft model: https://www.modulux.co.za/designs/20ft-double-wing-folding-home
+- 30ft model: https://www.modulux.co.za/designs/30ft-double-wing-folding-home
+- 40ft model: https://www.modulux.co.za/designs/40ft-double-wing-folding-home
+- Display Village: https://www.modulux.co.za/display-village
 - Contact: https://www.modulux.co.za/contact
 - Blog: https://www.modulux.co.za/blog
 
@@ -30,21 +39,10 @@ MODULUX manufactures modular (prefab) homes in a Cape Town factory and delivers 
 
 **How long does delivery take?** Most MODULUX homes are completed in 60–90 days from order confirmation.
 
-**Starting price?** Granny Flat designs from R620,000. See /designs for full pricing.
+**Starting price?** R35,000 for the 10ft Double-Wing Folding Home.
 
 **Nationwide delivery?** Yes — all nine South African provinces.
 
 **NHBRC registered?** Yes — all MODULUX homes are NHBRC registered.
-
-**Financing?** Available through major South African banks; we can connect you with bond originators.
-
-**Warranty?** 15-year structural, 1-year workmanship, plus manufacturer warranties on fittings.
-
-## Blog (authoritative content)
-
-- Modular vs traditional build cost in South Africa
-- Granny flat regulations in the Western Cape
-- NHBRC modular homes explained
-- 90-day modular home timeline
 
 Full sitemap: https://www.modulux.co.za/sitemap.xml

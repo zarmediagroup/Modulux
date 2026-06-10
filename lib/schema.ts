@@ -1,5 +1,6 @@
 import { moduluxFaqs, type FaqItem } from "@/lib/faqs";
 import { moduluxProcessSteps } from "@/lib/process";
+import { designs } from "@/lib/designs";
 import { siteConfig } from "@/lib/site";
 
 export function getOrganizationSchema() {
@@ -87,9 +88,10 @@ export function getLocalBusinessSchema() {
       { "@type": "State", name: "Western Cape" },
       { "@type": "Country", name: "South Africa" },
     ],
-    priceRange: "R620000+",
+    priceRange: "R35000+",
     knowsAbout: [
-      "Modular homes",
+      "Double-wing folding homes",
+      "Expandable modular homes",
       "Prefab homes",
       "Granny flats",
       "NHBRC registered housing",
@@ -254,9 +256,9 @@ export function getServiceSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Modular home design, manufacture and delivery",
+    name: "Double-wing folding home design, manufacture and delivery",
     description:
-      "MODULUX designs, factory-builds, and delivers NHBRC-registered modular homes across South Africa from Cape Town.",
+      "MODULUX designs, factory-builds, and delivers NHBRC-registered 10ft, 20ft, 30ft, and 40ft double-wing folding homes across South Africa from Cape Town.",
     provider: {
       "@id": `${siteConfig.url}/#localbusiness`,
     },
@@ -264,6 +266,24 @@ export function getServiceSchema() {
       "@type": "AdministrativeArea",
       name: area,
     })),
-    serviceType: "Modular home construction",
+    serviceType: "Double-wing folding home construction",
+  };
+}
+
+export function getDesignsItemListSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "MODULUX Double-Wing Folding Homes",
+    description:
+      "10ft, 20ft, 30ft, and 40ft expandable folding home models from R35,000 to R90,000.",
+    numberOfItems: designs.length,
+    itemListElement: designs.map((design, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: design.name,
+      url: `${siteConfig.url}/designs/${design.slug}`,
+      description: design.price,
+    })),
   };
 }

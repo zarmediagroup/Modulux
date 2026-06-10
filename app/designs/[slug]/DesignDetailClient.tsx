@@ -117,7 +117,7 @@ export default function DesignDetailClient({ design, related }: Props) {
 
               <div className="flex items-center gap-4 pt-6 border-t border-[#E5E0D8]">
                 <div>
-                  <p className="text-xs text-[#7A7A7A] uppercase tracking-wider">Starting from</p>
+                  <p className="text-xs text-[#7A7A7A] uppercase tracking-wider">Price</p>
                   <p className="text-3xl font-extrabold text-[#1C1C1C]">{design.price}</p>
                 </div>
               </div>

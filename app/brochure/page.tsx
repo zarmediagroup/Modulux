@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Download Brochure",
-  description: "Request the MODULUX modular homes brochure — Standard, Premium, and Granny Flat ranges.",
+  description: "Request the MODULUX folding homes brochure — 10ft, 20ft, 30ft, and 40ft double-wing designs.",
   path: "/brochure",
 });
 
@@ -18,7 +18,7 @@ export default function BrochurePage() {
     >
       <p>
         Our brochure includes floor plans, pricing guides, and finish options for every MODULUX
-        design — Standard, Premium, and Granny Flat ranges.
+        design — 10ft, 20ft, 30ft, and 40ft double-wing folding home ranges.
       </p>
       <p>
         To receive a copy, contact our team at{" "}

@@ -4,7 +4,7 @@ export const siteConfig = {
   url: "https://www.modulux.co.za",
   locale: "en_ZA",
   description:
-    "MODULUX builds precision-engineered modular homes in Cape Town, South Africa. Beautifully designed, delivered fully finished, anywhere in South Africa.",
+    "MODULUX builds precision-engineered double-wing folding homes in Cape Town, South Africa. 10ft, 20ft, 30ft, and 40ft models from R35,000. NHBRC registered, delivered nationwide.",
   email: "info@modulux.co.za",
   phone: "+27729095837",
   phoneDisplay: "072 909 5837",
@@ -45,8 +45,10 @@ export const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "";
 export const keyIndexPages = [
   "/",
   "/designs",
-  "/designs/the-stellenbosch",
-  "/designs/the-karoo",
+  "/designs/10ft-double-wing-folding-home",
+  "/designs/20ft-double-wing-folding-home",
+  "/designs/30ft-double-wing-folding-home",
+  "/designs/40ft-double-wing-folding-home",
   "/commercial",
   "/display-village",
   "/about",

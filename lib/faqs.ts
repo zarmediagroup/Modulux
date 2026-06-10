@@ -26,7 +26,7 @@ export const moduluxFaqs: FaqItem[] = [
     a: "MODULUX is based in Bellville, Cape Town, Western Cape. Our Display Village showroom is in Bellville where you can walk through 10ft, 20ft, 30ft, and 40ft modular units before you buy.",
   },
   {
-    q: "What is the starting price for a MODULUX modular home?",
-    a: "MODULUX Granny Flat designs start from R620,000. Standard and Premium range homes vary by size and specification — browse our designs page for current pricing from R620,000 to R1.45 million.",
+    q: "What sizes of folding homes does MODULUX offer?",
+    a: "MODULUX offers four double-wing folding home sizes: 10ft (1 bed, 19.08m², R35,000), 20ft (2 bed, 37.52m², R55,000), 30ft (3 bed, 57.24m², R80,000), and 40ft (3 bed, 75.05m², R90,000). All models expand into a full living space within minutes.",
   },
 ];

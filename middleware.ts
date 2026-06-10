@@ -5,6 +5,16 @@ import { isMaintenanceMode } from "@/lib/maintenance";
 const STATIC_FILE = /\.(ico|png|jpg|jpeg|gif|svg|webp|css|js|woff2?|txt|xml)$/;
 
 export function middleware(request: NextRequest) {
+  const host = request.headers.get("host");
+
+  // Consolidate apex domain to www for canonical SEO
+  if (host === "modulux.co.za") {
+    const url = new URL(request.url);
+    url.host = "www.modulux.co.za";
+    url.protocol = "https:";
+    return NextResponse.redirect(url, 301);
+  }
+
   if (!isMaintenanceMode()) {
     return NextResponse.next();
   }

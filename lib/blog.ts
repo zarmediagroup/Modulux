@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Traditional builds in the Western Cape typically range from R8,000 to R15,000 per square metre depending on specification, site conditions, and architect fees. Modular factory-built homes often come in at a fixed price per design — for example, MODULUX Standard designs from R950,000 and Granny Flats from R620,000 — because manufacturing in a controlled factory reduces waste and weather delays.",
+        text: "Traditional builds in the Western Cape typically range from R8,000 to R15,000 per square metre depending on specification, site conditions, and architect fees. MODULUX double-wing folding homes offer fixed pricing from R35,000 (10ft) to R90,000 (40ft) because manufacturing in a controlled factory reduces waste and weather delays.",
       },
       {
         type: "h2",
@@ -119,7 +119,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Many Western Cape municipalities cap secondary dwellings at 60m² or tie the size to a percentage of the primary dwelling. MODULUX Granny Flat designs start at 45m² — well within typical limits — but always confirm with your local planning department before ordering.",
+        text: "Many Western Cape municipalities cap secondary dwellings at 60m² or tie the size to a percentage of the primary dwelling. The MODULUX 10ft Double-Wing Folding Home at 19.08m² is well within typical limits — but always confirm with your local planning department before ordering.",
       },
       {
         type: "h2",

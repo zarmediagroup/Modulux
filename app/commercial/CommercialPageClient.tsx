@@ -566,7 +566,7 @@ export default function CommercialPageClient() {
             Explore Our Home Designs
           </h2>
           <p className="text-white/60 mb-8 max-w-md mx-auto">
-            Browse our full range of Standard, Premium, and Granny Flat residential designs.
+            Browse our full range of 10ft, 20ft, 30ft, and 40ft folding home designs.
           </p>
           <Link href="/designs">
             <Button variant="primary" size="lg" iconRight={ArrowRight}>

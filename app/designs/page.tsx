@@ -1,20 +1,39 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import DesignsPageClient from "./DesignsPageClient";
+import JsonLd from "@/components/seo/JsonLd";
 import { pageMetadata } from "@/lib/seo";
+import { getBreadcrumbSchema, getDesignsItemListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Modular Home Designs South Africa",
+  title: "Double-Wing Folding Home Designs",
   description:
-    "Browse MODULUX Standard, Premium, and Granny Flat modular home designs. Filter by bedrooms, price, and size. From R620k with nationwide delivery.",
+    "Browse MODULUX 10ft, 20ft, 30ft, and 40ft double-wing folding home designs. Filter by bedrooms, price, and size. From R35,000 with nationwide delivery.",
   path: "/designs",
   keywords: [
-    "modular home designs South Africa",
-    "prefab house plans",
-    "granny flat designs",
-    "modular home prices",
+    "folding home designs South Africa",
+    "double-wing folding house",
+    "10ft folding home",
+    "20ft folding home",
+    "modular home prices Cape Town",
   ],
 });
 
 export default function DesignsPage() {
-  return <DesignsPageClient />;
+  return (
+    <>
+      <JsonLd
+        data={[
+          getDesignsItemListSchema(),
+          getBreadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Designs", path: "/designs" },
+          ]),
+        ]}
+      />
+      <Suspense>
+        <DesignsPageClient />
+      </Suspense>
+    </>
+  );
 }

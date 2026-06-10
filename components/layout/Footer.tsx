@@ -6,9 +6,10 @@ import { siteConfig } from "@/lib/site";
 
 const footerLinks = {
   Designs: [
-    { label: "Standard", href: "/designs?category=Standard" },
-    { label: "Premium", href: "/designs?category=Premium" },
-    { label: "Granny Flats", href: "/designs?category=Granny+Flat" },
+    { label: "10ft Folding Home", href: "/designs/10ft-double-wing-folding-home" },
+    { label: "20ft Folding Home", href: "/designs/20ft-double-wing-folding-home" },
+    { label: "30ft Folding Home", href: "/designs/30ft-double-wing-folding-home" },
+    { label: "40ft Folding Home", href: "/designs/40ft-double-wing-folding-home" },
     { label: "View All", href: "/designs" },
   ],
   Company: [

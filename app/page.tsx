@@ -17,13 +17,14 @@ const ContactFormSection = dynamic(() => import("@/components/sections/ContactFo
 export const metadata = pageMetadata({
   title: "Modular Homes Cape Town | MODULUX — The Modern Way of Housing",
   description:
-    "MODULUX builds precision-engineered modular homes in Cape Town, South Africa. Browse Standard, Premium, and Granny Flat designs from R620k. NHBRC registered.",
+    "MODULUX builds precision-engineered double-wing folding homes in Cape Town, South Africa. Browse 10ft, 20ft, 30ft, and 40ft designs from R35,000. NHBRC registered.",
   path: "/",
   keywords: [
-    "modular homes South Africa",
+    "folding homes South Africa",
+    "double-wing folding house Cape Town",
     "modular homes Cape Town",
+    "10ft folding home",
     "prefab homes South Africa",
-    "granny flat Cape Town",
     "NHBRC modular homes",
   ],
 });

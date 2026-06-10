@@ -1,7 +1,7 @@
 export const moduluxProcessSteps = [
   {
     name: "Choose Your Design",
-    text: "Browse our Standard, Premium, and Granny Flat designs. Find the layout and aesthetic that fits your lifestyle and stand size.",
+    text: "Browse our 10ft, 20ft, 30ft, and 40ft double-wing folding homes. Choose the size and layout that fits your stand and budget.",
   },
   {
     name: "Customise",

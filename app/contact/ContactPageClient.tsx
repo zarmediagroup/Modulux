@@ -24,7 +24,13 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const provinces = ["Western Cape", "Gauteng", "KwaZulu-Natal", "Eastern Cape", "Limpopo", "Mpumalanga", "Northern Cape", "North West", "Free State"];
-const interests = ["Standard Range", "Premium Range", "Granny Flat", "Not Sure Yet"];
+const interests = [
+  "10ft Double-Wing Folding Home",
+  "20ft Double-Wing Folding Home",
+  "30ft Double-Wing Folding Home",
+  "40ft Double-Wing Folding Home",
+  "Not Sure Yet",
+];
 
 const faqs = moduluxFaqs;
 

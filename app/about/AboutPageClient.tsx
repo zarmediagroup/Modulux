@@ -298,7 +298,7 @@ export default function AboutPageClient() {
             Explore Our Home Designs
           </h2>
           <p className="text-white/60 mb-8 max-w-md mx-auto">
-            Browse our full range of Standard, Premium, and Granny Flat designs.
+            Browse our full range of double-wing folding home designs.
           </p>
           <Link href="/designs">
             <Button variant="primary" size="lg" iconRight={ArrowRight}>
