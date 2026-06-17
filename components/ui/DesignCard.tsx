@@ -5,7 +5,7 @@ import Link from "next/link";
 import { BedDouble, Bath, Car, Square, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { HomeDesign } from "@/lib/designs";
-import Badge from "./Badge";
+import { DesignBadge } from "./Badge";
 
 interface DesignCardProps {
   design: HomeDesign;
@@ -43,7 +43,7 @@ export function DesignCard({ design, index = 0 }: DesignCardProps) {
             </div>
             {/* Badge */}
             <div className="absolute top-3 left-3">
-              <Badge category={design.category} />
+              <DesignBadge design={design} />
             </div>
           </div>
 

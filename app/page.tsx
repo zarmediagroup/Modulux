@@ -17,7 +17,7 @@ const ContactFormSection = dynamic(() => import("@/components/sections/ContactFo
 export const metadata = pageMetadata({
   title: "Modular Homes Cape Town | MODULUX — The Modern Way of Housing",
   description:
-    "MODULUX builds precision-engineered double-wing folding homes in Cape Town, South Africa. Browse 10ft, 20ft, 30ft, and 40ft designs from R35,000. NHBRC registered.",
+    "MODULUX builds folding homes, container units, and space capsules in Cape Town, South Africa. Three product lines from R25,000. NHBRC registered.",
   path: "/",
   keywords: [
     "folding homes South Africa",

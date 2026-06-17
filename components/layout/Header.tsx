@@ -13,10 +13,9 @@ const navLinks = [
     label: "Designs",
     href: "/designs",
     dropdown: [
-      { label: "10ft Folding Home", href: "/designs/10ft-double-wing-folding-home" },
-      { label: "20ft Folding Home", href: "/designs/20ft-double-wing-folding-home" },
-      { label: "30ft Folding Home", href: "/designs/30ft-double-wing-folding-home" },
-      { label: "40ft Folding Home", href: "/designs/40ft-double-wing-folding-home" },
+      { label: "Folding Homes", href: "/designs?series=Folding" },
+      { label: "Container Series", href: "/designs?series=Container" },
+      { label: "Space Capsule", href: "/designs?series=Space+Capsule" },
       { label: "View All", href: "/designs" },
     ],
   },

@@ -88,14 +88,14 @@ export function getLocalBusinessSchema() {
       { "@type": "State", name: "Western Cape" },
       { "@type": "Country", name: "South Africa" },
     ],
-    priceRange: "R35000+",
+    priceRange: "R25000+",
     knowsAbout: [
       "Double-wing folding homes",
+      "Flat-pack container houses",
+      "Space capsule accommodation",
       "Expandable modular homes",
       "Prefab homes",
-      "Granny flats",
       "NHBRC registered housing",
-      "Factory-built homes",
     ],
   };
 }
@@ -276,7 +276,7 @@ export function getDesignsItemListSchema() {
     "@type": "ItemList",
     name: "MODULUX Double-Wing Folding Homes",
     description:
-      "10ft, 20ft, 30ft, and 40ft expandable folding home models from R35,000 to R90,000.",
+      "Folding homes, container units, and space capsules from R25,000 to R120,000.",
     numberOfItems: designs.length,
     itemListElement: designs.map((design, index) => ({
       "@type": "ListItem",

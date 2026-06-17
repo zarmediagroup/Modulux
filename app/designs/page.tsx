@@ -6,9 +6,9 @@ import { pageMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getDesignsItemListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Double-Wing Folding Home Designs",
+  title: "Modular & Folding Home Designs",
   description:
-    "Browse MODULUX 10ft, 20ft, 30ft, and 40ft double-wing folding home designs. Filter by bedrooms, price, and size. From R35,000 with nationwide delivery.",
+    "Browse MODULUX folding homes, container series, and space capsules. Filter by series, price, and size. From R25,000 with nationwide delivery.",
   path: "/designs",
   keywords: [
     "folding home designs South Africa",

@@ -1,18 +1,18 @@
-import type { DesignCategory } from "@/lib/designs";
+import type { DesignCategory, HomeDesign } from "@/lib/designs";
 
 interface BadgeProps {
   category: DesignCategory;
+  label: string;
   className?: string;
 }
 
 const categoryStyles: Record<DesignCategory, string> = {
-  "10ft": "bg-[#4A6741]/15 text-[#2d4a28] border border-[#4A6741]/30",
-  "20ft": "bg-slate-100 text-slate-700 border border-slate-200",
-  "30ft": "bg-[#C8A97E]/20 text-[#8B6914] border border-[#C8A97E]/40",
-  "40ft": "bg-[#1C1C1C]/10 text-[#1C1C1C] border border-[#1C1C1C]/20",
+  Folding: "bg-[#C8A97E]/20 text-[#8B6914] border border-[#C8A97E]/40",
+  Container: "bg-slate-100 text-slate-700 border border-slate-200",
+  "Space Capsule": "bg-[#1C1C1C]/10 text-[#1C1C1C] border border-[#1C1C1C]/20",
 };
 
-export function Badge({ category, className = "" }: BadgeProps) {
+export function Badge({ category, label, className = "" }: BadgeProps) {
   return (
     <span
       className={`
@@ -21,9 +21,15 @@ export function Badge({ category, className = "" }: BadgeProps) {
         ${className}
       `}
     >
-      {category} Folding
+      {label}
     </span>
   );
+}
+
+export function DesignBadge({ design, className }: { design: HomeDesign; className?: string }) {
+  const label =
+    design.series === "Folding" ? `${design.badge} Folding` : design.badge;
+  return <Badge category={design.category} label={label} className={className} />;
 }
 
 export default Badge;

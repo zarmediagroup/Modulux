@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { SlidersHorizontal, X, ChevronDown } from "lucide-react";
-import { designCategories, designs } from "@/lib/designs";
+import { designSeries, designs } from "@/lib/designs";
 import DesignCard from "@/components/ui/DesignCard";
 import SectionLabel from "@/components/ui/SectionLabel";
 
@@ -14,14 +14,19 @@ export default function DesignsPageClient() {
   const searchParams = useSearchParams();
   const [bedroomFilters, setBedroomFilters] = useState<number[]>([]);
   const [categoryFilters, setCategoryFilters] = useState<string[]>([]);
-  const [priceRange, setPriceRange] = useState<[number, number]>([30000, 100000]);
-  const [areaRange, setAreaRange] = useState<[number, number]>([15, 80]);
+  const [priceRange, setPriceRange] = useState<[number, number]>([25000, 120000]);
+  const [areaRange, setAreaRange] = useState<[number, number]>([14, 80]);
   const [sortBy, setSortBy] = useState<SortOption>("price-asc");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
+    const series = searchParams.get("series");
+    if (series && designSeries.includes(series as (typeof designSeries)[number])) {
+      setCategoryFilters([series]);
+      return;
+    }
     const category = searchParams.get("category");
-    if (category && designCategories.includes(category as (typeof designCategories)[number])) {
+    if (category && designSeries.includes(category as (typeof designSeries)[number])) {
       setCategoryFilters([category]);
     }
   }, [searchParams]);
@@ -58,8 +63,8 @@ export default function DesignsPageClient() {
   const clearFilters = () => {
     setBedroomFilters([]);
     setCategoryFilters([]);
-    setPriceRange([30000, 100000]);
-    setAreaRange([15, 80]);
+    setPriceRange([25000, 120000]);
+    setAreaRange([14, 80]);
   };
 
   const hasFilters = bedroomFilters.length > 0 || categoryFilters.length > 0;
@@ -88,9 +93,9 @@ export default function DesignsPageClient() {
 
       {/* Category */}
       <div>
-        <h3 className="text-sm font-semibold text-[#1C1C1C] mb-3 uppercase tracking-wider">Unit Size</h3>
+        <h3 className="text-sm font-semibold text-[#1C1C1C] mb-3 uppercase tracking-wider">Series</h3>
         <div className="space-y-2">
-          {designCategories.map((cat) => (
+          {designSeries.map((cat) => (
             <label key={cat} className="flex items-center gap-3 cursor-pointer group">
               <input
                 type="checkbox"
@@ -98,7 +103,7 @@ export default function DesignsPageClient() {
                 onChange={() => toggleCat(cat)}
                 className="w-4 h-4 rounded accent-[#C8A97E]"
               />
-              <span className="text-sm text-[#2D2D2D] group-hover:text-[#C8A97E] transition-colors">{cat} Folding</span>
+              <span className="text-sm text-[#2D2D2D] group-hover:text-[#C8A97E] transition-colors">{cat}</span>
             </label>
           ))}
         </div>
@@ -110,17 +115,17 @@ export default function DesignsPageClient() {
         <div className="space-y-3">
           <input
             type="range"
-            min={30000}
-            max={100000}
+            min={25000}
+            max={120000}
             step={5000}
             value={priceRange[1]}
             onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
             className="w-full accent-[#C8A97E]"
           />
           <div className="flex justify-between text-xs text-[#7A7A7A]">
-            <span>R35k</span>
+            <span>R25k</span>
             <span className="font-semibold text-[#C8A97E]">Up to R{(priceRange[1] / 1000).toFixed(0)}k</span>
-            <span>R90k</span>
+            <span>R120k</span>
           </div>
         </div>
       </div>
@@ -131,7 +136,7 @@ export default function DesignsPageClient() {
         <div className="space-y-3">
           <input
             type="range"
-            min={15}
+            min={14}
             max={80}
             step={1}
             value={areaRange[1]}
@@ -139,7 +144,7 @@ export default function DesignsPageClient() {
             className="w-full accent-[#C8A97E]"
           />
           <div className="flex justify-between text-xs text-[#7A7A7A]">
-            <span>19m²</span>
+            <span>14m²</span>
             <span className="font-semibold text-[#C8A97E]">Up to {areaRange[1]}m²</span>
             <span>75m²</span>
           </div>
@@ -169,7 +174,7 @@ export default function DesignsPageClient() {
             Our Home Designs
           </h1>
           <p className="mt-3 text-white/60 text-lg">
-            Browse our 10ft, 20ft, 30ft, and 40ft double-wing folding homes from R35,000.
+            Browse folding homes, container units, and space capsules from R25,000.
           </p>
         </div>
       </div>

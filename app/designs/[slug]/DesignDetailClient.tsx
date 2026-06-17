@@ -9,7 +9,7 @@ import {
   ChevronLeft, ChevronRight, MessageCircle, ArrowRight,
 } from "lucide-react";
 import { HomeDesign } from "@/lib/designs";
-import Badge from "@/components/ui/Badge";
+import { DesignBadge } from "@/components/ui/Badge";
 import DesignCard from "@/components/ui/DesignCard";
 import Button from "@/components/ui/Button";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -83,7 +83,7 @@ export default function DesignDetailClient({ design, related }: Props) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Badge category={design.category} className="mb-4" />
+              <DesignBadge design={design} className="mb-4" />
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1C1C1C] tracking-tight mb-3">
                 {design.name}
               </h1>

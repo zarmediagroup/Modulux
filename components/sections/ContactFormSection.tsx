@@ -10,6 +10,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
+import { productInterests } from "@/lib/contactOptions";
 
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -24,13 +25,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const provinces = ["Western Cape", "Gauteng", "KwaZulu-Natal", "Eastern Cape", "Limpopo", "Mpumalanga", "Northern Cape", "North West", "Free State"];
-const interests = [
-  "10ft Double-Wing Folding Home",
-  "20ft Double-Wing Folding Home",
-  "30ft Double-Wing Folding Home",
-  "40ft Double-Wing Folding Home",
-  "Not Sure Yet",
-];
+const interests = productInterests;
 
 export default function ContactFormSection() {
   const [submitted, setSubmitted] = useState(false);

@@ -4,7 +4,7 @@ export const siteConfig = {
   url: "https://www.modulux.co.za",
   locale: "en_ZA",
   description:
-    "MODULUX builds precision-engineered double-wing folding homes in Cape Town, South Africa. 10ft, 20ft, 30ft, and 40ft models from R35,000. NHBRC registered, delivered nationwide.",
+    "MODULUX builds double-wing folding homes, container units, and space capsules in Cape Town, South Africa. From R25,000. NHBRC registered, delivered nationwide.",
   email: "info@modulux.co.za",
   phone: "+27729095837",
   phoneDisplay: "072 909 5837",
@@ -49,6 +49,8 @@ export const keyIndexPages = [
   "/designs/20ft-double-wing-folding-home",
   "/designs/30ft-double-wing-folding-home",
   "/designs/40ft-double-wing-folding-home",
+  "/designs/flat-pack-container-house",
+  "/designs/space-capsule-series-x7",
   "/commercial",
   "/display-village",
   "/about",

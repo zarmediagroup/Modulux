@@ -23,10 +23,14 @@ export const moduluxFaqs: FaqItem[] = [
   },
   {
     q: "Where is MODULUX based?",
-    a: "MODULUX is based in Bellville, Cape Town, Western Cape. Our Display Village showroom is in Bellville where you can walk through 10ft, 20ft, 30ft, and 40ft modular units before you buy.",
+    a: "MODULUX is based in Bellville, Cape Town, Western Cape. Our Display Village showroom is in Bellville where you can walk through folding, container, and space capsule units before you buy.",
   },
   {
-    q: "What sizes of folding homes does MODULUX offer?",
-    a: "MODULUX offers four double-wing folding home sizes: 10ft (1 bed, 19.08m², R35,000), 20ft (2 bed, 37.52m², R55,000), 30ft (3 bed, 57.24m², R80,000), and 40ft (3 bed, 75.05m², R90,000). All models expand into a full living space within minutes.",
+    q: "What product lines does MODULUX offer?",
+    a: "MODULUX offers three series: Double-Wing Folding homes (10ft–40ft, from R35,000), Container series — Flat-pack, X-type, and Z-type (from R25,000), and Space Capsule accommodation (x3, x7, D3 models from R60,000 to R120,000). Browse our designs page for full specs.",
+  },
+  {
+    q: "What is the starting price?",
+    a: "MODULUX container units start from R25,000. Folding homes from R35,000 and space capsules from R60,000. The flagship Space Capsule x7 2nd Gen is R120,000.",
   },
 ];

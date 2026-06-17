@@ -1,7 +1,7 @@
 export const moduluxProcessSteps = [
   {
     name: "Choose Your Design",
-    text: "Browse our 10ft, 20ft, 30ft, and 40ft double-wing folding homes. Choose the size and layout that fits your stand and budget.",
+    text: "Browse our Folding, Container, and Space Capsule ranges. Choose the series and model that fits your stand, budget, and use case.",
   },
   {
     name: "Customise",

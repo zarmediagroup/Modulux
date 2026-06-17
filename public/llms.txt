@@ -1,48 +1,52 @@
-# MODULUX — Double-Wing Folding Homes, Cape Town, South Africa
+# MODULUX — Folding Homes, Containers & Space Capsules | Cape Town, South Africa
 
-> MODULUX builds precision-engineered, NHBRC-registered double-wing folding homes in Cape Town and delivers nationwide across South Africa. From R35,000. Display Village in Bellville, Western Cape.
+> MODULUX builds double-wing folding homes, container units, and space capsules in Cape Town and delivers nationwide. From R25,000. NHBRC registered. Display Village in Bellville, Western Cape.
 
 ## Company
 
-- **Name:** MODULUX
-- **Tagline:** The Modern Way of Housing
 - **Website:** https://www.modulux.co.za
 - **Email:** info@modulux.co.za
 - **Phone:** +27 72 909 5837
 - **Location:** 12 Modular Way, Bellville, Western Cape, 7530, South Africa
-- **Service area:** Cape Town, Western Cape, and all nine provinces of South Africa
 
-## Product range
+## Product lines
 
+### Double-Wing Folding Homes
 | Model | Price | Beds | Baths | Area |
 |-------|-------|------|-------|------|
 | 10ft Double-Wing Folding Home | R35,000 | 1 | 1 | 19.08 m² |
 | 20ft Double-Wing Folding Home | R55,000 | 2 | 1 | 37.52 m² |
 | 30ft Double-Wing Folding Home | R80,000 | 3 | 1 | 57.24 m² |
-| 40ft Single Double-Wing Folding Home | R90,000 | 3 | 1 | 75.05 m² |
+| 40ft Double-Wing Folding Home | R90,000 | 3 | 1 | 75.05 m² |
 
-All models feature a spacious bedroom layout, open-plan lounge and kitchen, fully equipped bathroom, and an expandable double-wing design that deploys within minutes.
+### Container Series
+| Model | Price | Beds | Baths | Area | Height |
+|-------|-------|------|-------|------|--------|
+| Flat-pack Container House | R25,000 | 1 | 1 | 14.7 m² | 2.8 m |
+| X-type Container House | R25,000 | 1 | 1 | 14.7 m² | 2.8 m |
+| Z-type Container House | R25,000 | 1 | 1 | 14.7 m² | 2.8 m |
+
+### Space Capsule Series
+| Model | Price | Beds | Baths | Kitchen | Area |
+|-------|-------|------|-------|---------|------|
+| Space Capsule Series x3 | R80,000 | 1 | 1 | 1 | 16.7 m² |
+| Space Capsule Series x3-2 | R80,000 | 1 | 1 | 1 | 16.7 m² |
+| Space Capsule Series x7 | R100,000 | 1 | 1 | 1 | 34.5 m² |
+| Space Capsule Series x7-2 | R100,000 | 1 | 1 | 1 | 34.5 m² |
+| Space Capsule Series x7 2nd Gen | R120,000 | 1 | 1 | 1 | 34.5 m² |
+| Space Capsule Series D3 | R60,000 | 1 | 1 | — | 18 m² |
 
 ## Key pages
 
-- Home: https://www.modulux.co.za/
-- Designs & pricing: https://www.modulux.co.za/designs
-- 10ft model: https://www.modulux.co.za/designs/10ft-double-wing-folding-home
-- 20ft model: https://www.modulux.co.za/designs/20ft-double-wing-folding-home
-- 30ft model: https://www.modulux.co.za/designs/30ft-double-wing-folding-home
-- 40ft model: https://www.modulux.co.za/designs/40ft-double-wing-folding-home
+- Designs: https://www.modulux.co.za/designs
 - Display Village: https://www.modulux.co.za/display-village
 - Contact: https://www.modulux.co.za/contact
-- Blog: https://www.modulux.co.za/blog
+- Sitemap: https://www.modulux.co.za/sitemap.xml
 
-## Frequently asked questions
+## FAQs
 
-**How long does delivery take?** Most MODULUX homes are completed in 60–90 days from order confirmation.
+**Starting price?** R25,000 (container series).
 
-**Starting price?** R35,000 for the 10ft Double-Wing Folding Home.
+**Delivery?** Nationwide across all nine South African provinces.
 
-**Nationwide delivery?** Yes — all nine South African provinces.
-
-**NHBRC registered?** Yes — all MODULUX homes are NHBRC registered.
-
-Full sitemap: https://www.modulux.co.za/sitemap.xml
+**NHBRC registered?** Yes.

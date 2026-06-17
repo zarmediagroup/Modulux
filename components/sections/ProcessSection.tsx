@@ -11,7 +11,7 @@ const steps = [
     icon: Search,
     title: "Choose Your Design",
     description:
-      "Browse our 10ft, 20ft, 30ft, and 40ft double-wing folding homes. Choose the size and layout that fits your stand and budget.",
+      "Browse our Folding, Container, and Space Capsule ranges. Choose the model that fits your stand, budget, and use case.",
   },
   {
     number: "02",
