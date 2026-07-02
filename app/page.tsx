@@ -34,10 +34,18 @@ export default function HomePage() {
     <>
       <JsonLd data={getHowToSchema()} />
       <HeroSection />
-      <IntroSection />
-      <SubBrandsSection />
-      <FeaturedDesignsSection />
-      <AboutSection />
+      <div className="hidden md:block">
+        <IntroSection />
+      </div>
+      <div className="hidden md:block">
+        <SubBrandsSection />
+      </div>
+      <div className="hidden md:block">
+        <FeaturedDesignsSection />
+      </div>
+      <div className="hidden md:block">
+        <AboutSection />
+      </div>
       <ProcessSection />
       <GallerySection />
       <DisplayVillageSection />
