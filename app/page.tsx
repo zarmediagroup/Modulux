@@ -34,6 +34,9 @@ export default function HomePage() {
     <>
       <JsonLd data={getHowToSchema()} />
       <HeroSection />
+      <div className="md:hidden">
+        <GallerySection />
+      </div>
       <div className="hidden md:block">
         <IntroSection />
       </div>
@@ -47,7 +50,9 @@ export default function HomePage() {
         <AboutSection />
       </div>
       <ProcessSection />
-      <GallerySection />
+      <div className="hidden md:block">
+        <GallerySection />
+      </div>
       <DisplayVillageSection />
       <TestimonialsSection />
       <ContactFormSection />
